@@ -1,0 +1,6 @@
+codCliente;nombre;ape1cli;ape2cli;dni;fechaNacimiento;telefono;email;codResponsable
+1;Juan;Perez;Lopez;11111111A;1990-01-01;600000001;juan@mail.com;__NULL__
+2;Ana;Gomez;Ruiz;22222222B;1985-05-05;600000002;ana@mail.com;__NULL__
+3;Luis;Diaz;Soto;33333333C;2015-03-10;600000003;luis@mail.com;1
+4;Maria;Lopez;Gil;44444444D;2012-07-20;600000004;maria@mail.com;2
+5;Carlos;Navarro;Rey;55555555E;2000-09-15;600000005;carlos@mail.com;__NULL__

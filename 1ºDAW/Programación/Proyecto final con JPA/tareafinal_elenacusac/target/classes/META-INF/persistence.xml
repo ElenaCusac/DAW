@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="parqueAtracciones" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>models.modelos.entidades.Atracciones</class>
+    <class>models.modelos.entidades.Clientes</class>
+    <class>models.modelos.entidades.DetalleEmpleado</class>
+    <class>models.modelos.entidades.DetalleServicios</class>
+    <class>models.modelos.entidades.Empleados</class>
+    <class>models.modelos.entidades.Entradas</class>
+    <class>models.modelos.entidades.Oficinas</class>
+    <class>models.modelos.entidades.Parques</class>
+    <class>models.modelos.entidades.Servicios</class>
+    <class>models.modelos.entidades.Zonas</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/parqueatracciones?serverTimezone=UTC"/>
+      <property name="javax.persistence.jdbc.user" value="elena"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="12a12b12c1"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
+      <property name="eclipselink.weaving" value="false"/>
+    </properties>
+  </persistence-unit>
+</persistence>

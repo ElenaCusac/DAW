@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+
+    <p id="pregunta1">1. El limón es una fruta cítrica.</p>
+    <button onclick="responder('pregunta1', true)">Verdadero</button>
+    <button onclick="responder('pregunta1', false)">Falso</button>
+
+    <p id="pregunta2">2. La capital de Francia es París.</p>
+    <button onclick="responder('pregunta2', true)">Verdadero</button>
+    <button onclick="responder('pregunta2', false)">Falso</button>
+
+    <p id="pregunta3">3. La Luna emite su propia luz.</p>
+    <button onclick="responder('pregunta3', false)">Verdadero</button>
+    <button onclick="responder('pregunta3', true)">Falso</button>
+
+    <p id="pregunta4">4. Los líquenes son la unión simbiótica de un hongo y un alga.</p>
+    <button onclick="responder('pregunta4', true)">Verdadero</button>
+    <button onclick="responder('pregunta4', false)">Falso</button>
+
+    <p id="pregunta5">5. Cleopatra era de origen egipcio puro.</p>
+    <button onclick="responder('pregunta5', false)">Verdadero</button>
+    <button onclick="responder('pregunta5', true)">Falso</button>
+
+    <p id="pregunta6">6. El fémur es el hueso más largo del cuerpo humano.</p>
+    <button onclick="responder('pregunta6', true)">Verdadero</button>
+    <button onclick="responder('pregunta6', false)">Falso</button>
+
+    <p id="pregunta7">7. La Gran Muralla China es visible desde el espacio a simple vista.</p>
+    <button onclick="responder('pregunta7', false)">Verdadero</button>
+    <button onclick="responder('pregunta7', true)">Falso</button>
+
+    <script>
+        function responder(idPregunta, esCorrecta) {
+            const pregunta = document.getElementById(idPregunta);
+            pregunta.style.fontSize = "17px";
+            pregunta.style.color = esCorrecta ? "green" : "red";
+        }
+    </script>
+
+</body>
+
+</html>

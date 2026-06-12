@@ -1,0 +1,802 @@
+[
+  {
+    "vehicle_make": "Pontiac",
+    "vehicle_model": "Firebird",
+    "vehicle_year": 1967,
+    "vehicle_vin": "1G4CU541614152629",
+    "vehicle_color": "Teal",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Chrysler",
+    "vehicle_model": "Sebring",
+    "vehicle_year": 2006,
+    "vehicle_vin": "KNDPB3A28D7610347",
+    "vehicle_color": "Crimson",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "Ranger",
+    "vehicle_year": 2008,
+    "vehicle_vin": "WBANA53524B071098",
+    "vehicle_color": "Crimson",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Buick",
+    "vehicle_model": "Enclave",
+    "vehicle_year": 2009,
+    "vehicle_vin": "WBAVC93537K749895",
+    "vehicle_color": "Red",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "GMC",
+    "vehicle_model": "Suburban 2500",
+    "vehicle_year": 1997,
+    "vehicle_vin": "3D4PH9FG8BT721725",
+    "vehicle_color": "Mauv",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Bugatti",
+    "vehicle_model": "Veyron",
+    "vehicle_year": 2011,
+    "vehicle_vin": "TRUWT28N241491562",
+    "vehicle_color": "Teal",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Mitsubishi",
+    "vehicle_model": "Eclipse",
+    "vehicle_year": 1998,
+    "vehicle_vin": "WAUXL58E25A558868",
+    "vehicle_color": "Indigo",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Eagle",
+    "vehicle_model": "Vision",
+    "vehicle_year": 1995,
+    "vehicle_vin": "1HGCP2E4XAA279146",
+    "vehicle_color": "Aquamarine",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "Contour",
+    "vehicle_year": 1999,
+    "vehicle_vin": "SCFAD06D69G800908",
+    "vehicle_color": "Puce",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Isuzu",
+    "vehicle_model": "Trooper",
+    "vehicle_year": 1997,
+    "vehicle_vin": "1FTEW1C87FF838508",
+    "vehicle_color": "Purple",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Chevrolet",
+    "vehicle_model": "Camaro",
+    "vehicle_year": 2011,
+    "vehicle_vin": "WA1VGAFP6EA055432",
+    "vehicle_color": "Violet",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Mercedes-Benz",
+    "vehicle_model": "G-Class",
+    "vehicle_year": 2010,
+    "vehicle_vin": "2C3CDYCJ6DH727329",
+    "vehicle_color": "Pink",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Volkswagen",
+    "vehicle_model": "rio",
+    "vehicle_year": 2002,
+    "vehicle_vin": "1D7RV1CT0BS135805",
+    "vehicle_color": "Fuscia",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Pontiac",
+    "vehicle_model": "Firebird",
+    "vehicle_year": 1988,
+    "vehicle_vin": "WAUDGBFLXCA508790",
+    "vehicle_color": "Fuscia",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Maserati",
+    "vehicle_model": "Quattroporte",
+    "vehicle_year": 2010,
+    "vehicle_vin": "JN1CV6AP3AM998039",
+    "vehicle_color": "Goldenrod",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Chevrolet",
+    "vehicle_model": "Suburban 1500",
+    "vehicle_year": 2001,
+    "vehicle_vin": "3GTXCYEJ3AG114206",
+    "vehicle_color": "Crimson",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Chrysler",
+    "vehicle_model": "Town & Country",
+    "vehicle_year": 1993,
+    "vehicle_vin": "1G6DA1ED2B0177977",
+    "vehicle_color": "Green",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Mitsubishi",
+    "vehicle_model": "Eclipse",
+    "vehicle_year": 2000,
+    "vehicle_vin": "WBANW53548C036709",
+    "vehicle_color": "Puce",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Mercedes-Benz",
+    "vehicle_model": "S-Class",
+    "vehicle_year": 2006,
+    "vehicle_vin": "1FTEW1E84AF429369",
+    "vehicle_color": "Aquamarine",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Audi",
+    "vehicle_model": "Q7",
+    "vehicle_year": 2010,
+    "vehicle_vin": "1N6AA0CC9CN463119",
+    "vehicle_color": "Maroon",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "GMC",
+    "vehicle_model": "Savana 3500",
+    "vehicle_year": 2012,
+    "vehicle_vin": "YV1852AR3A1611689",
+    "vehicle_color": "Violet",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Plymouth",
+    "vehicle_model": "Laser",
+    "vehicle_year": 1989,
+    "vehicle_vin": "1D4PT5GK9BW096899",
+    "vehicle_color": "Green",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Cadillac",
+    "vehicle_model": "DeVille",
+    "vehicle_year": 2005,
+    "vehicle_vin": "5J8TB4H3XGL260977",
+    "vehicle_color": "Goldenrod",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Oldsmobile",
+    "vehicle_model": "88",
+    "vehicle_year": 1995,
+    "vehicle_vin": "JTDKN3DU3B0459079",
+    "vehicle_color": "Khaki",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "Ram Van 2500",
+    "vehicle_year": 1996,
+    "vehicle_vin": "1GYS4BKJ7FR291366",
+    "vehicle_color": "Pink",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "GMC",
+    "vehicle_model": "Savana",
+    "vehicle_year": 2006,
+    "vehicle_vin": "JN8BS1MW0EM269515",
+    "vehicle_color": "Turquoise",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "Caliber",
+    "vehicle_year": 2007,
+    "vehicle_vin": "1FTWF3D51AE189548",
+    "vehicle_color": "Green",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Chrysler",
+    "vehicle_model": "New Yorker",
+    "vehicle_year": 1995,
+    "vehicle_vin": "SALFP2BG7FH233839",
+    "vehicle_color": "Puce",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Buick",
+    "vehicle_model": "Regal",
+    "vehicle_year": 2011,
+    "vehicle_vin": "1J4RR4GG8BC967068",
+    "vehicle_color": "Mauv",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Mercedes-Benz",
+    "vehicle_model": "SLK-Class",
+    "vehicle_year": 2002,
+    "vehicle_vin": "JA32X8HW3DU575024",
+    "vehicle_color": "Turquoise",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Lincoln",
+    "vehicle_model": "Blackwood",
+    "vehicle_year": 2002,
+    "vehicle_vin": "WBAWB33507P378427",
+    "vehicle_color": "Goldenrod",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Mazda",
+    "vehicle_model": "MPV",
+    "vehicle_year": 2003,
+    "vehicle_vin": "JTJBC1BA4B2245464",
+    "vehicle_color": "Purple",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Mitsubishi",
+    "vehicle_model": "Pajero",
+    "vehicle_year": 1992,
+    "vehicle_vin": "1FTFW1E84AK420425",
+    "vehicle_color": "Maroon",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Hyundai",
+    "vehicle_model": "Elantra",
+    "vehicle_year": 2007,
+    "vehicle_vin": "KNADM5A35E6184039",
+    "vehicle_color": "Red",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Chrysler",
+    "vehicle_model": "Town & Country",
+    "vehicle_year": 1992,
+    "vehicle_vin": "5UXFG83559L865794",
+    "vehicle_color": "Red",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Buick",
+    "vehicle_model": "Century",
+    "vehicle_year": 1990,
+    "vehicle_vin": "SCFEBBCF6CG657488",
+    "vehicle_color": "Yellow",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Lotus",
+    "vehicle_model": "Exige",
+    "vehicle_year": 2009,
+    "vehicle_vin": "WAUDG74F25N277406",
+    "vehicle_color": "Teal",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Honda",
+    "vehicle_model": "Accord",
+    "vehicle_year": 1994,
+    "vehicle_vin": "JTEBU5JR1F5885825",
+    "vehicle_color": "Purple",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "ZX2",
+    "vehicle_year": 2002,
+    "vehicle_vin": "JM3ER2A57C0414504",
+    "vehicle_color": "Blue",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Buick",
+    "vehicle_model": "Riviera",
+    "vehicle_year": 1988,
+    "vehicle_vin": "5GAKVCKD7DJ633267",
+    "vehicle_color": "Crimson",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Isuzu",
+    "vehicle_model": "Hombre",
+    "vehicle_year": 1996,
+    "vehicle_vin": "1G6DS57V180398313",
+    "vehicle_color": "Yellow",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Buick",
+    "vehicle_model": "Enclave",
+    "vehicle_year": 2012,
+    "vehicle_vin": "137ZA90311E502400",
+    "vehicle_color": "Puce",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Acura",
+    "vehicle_model": "Integra",
+    "vehicle_year": 1993,
+    "vehicle_vin": "3GYFNDEY7AS953312",
+    "vehicle_color": "Violet",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Toyota",
+    "vehicle_model": "Tacoma",
+    "vehicle_year": 2005,
+    "vehicle_vin": "1FTFW1E84AF632556",
+    "vehicle_color": "Red",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Scion",
+    "vehicle_model": "iQ",
+    "vehicle_year": 2012,
+    "vehicle_vin": "JTDKN3DU8B0205867",
+    "vehicle_color": "Aquamarine",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Kia",
+    "vehicle_model": "Sportage",
+    "vehicle_year": 2007,
+    "vehicle_vin": "SCFFBCCD5BG177482",
+    "vehicle_color": "Mauv",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Mazda",
+    "vehicle_model": "Mazdaspeed6",
+    "vehicle_year": 2007,
+    "vehicle_vin": "1FADP5CU4FL556365",
+    "vehicle_color": "Green",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Kia",
+    "vehicle_model": "Amanti",
+    "vehicle_year": 2009,
+    "vehicle_vin": "1FTNF2A50AE709846",
+    "vehicle_color": "Aquamarine",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "GMC",
+    "vehicle_model": "Sonoma",
+    "vehicle_year": 1994,
+    "vehicle_vin": "WBAPK7C5XAA044041",
+    "vehicle_color": "Indigo",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Volvo",
+    "vehicle_model": "V40",
+    "vehicle_year": 2003,
+    "vehicle_vin": "1GYS4GEF6BR758467",
+    "vehicle_color": "Green",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "Ram 1500 Club",
+    "vehicle_year": 2001,
+    "vehicle_vin": "1J4RG4GK6AC930318",
+    "vehicle_color": "Violet",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Mazda",
+    "vehicle_model": "Protege5",
+    "vehicle_year": 2002,
+    "vehicle_vin": "NM0GE9E76F1106916",
+    "vehicle_color": "Mauv",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "Ram Van B350",
+    "vehicle_year": 1994,
+    "vehicle_vin": "1G6DA1ED6B0311874",
+    "vehicle_color": "Blue",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "BMW",
+    "vehicle_model": "3 Series",
+    "vehicle_year": 1994,
+    "vehicle_vin": "WBA3A5C51EP234724",
+    "vehicle_color": "Maroon",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Subaru",
+    "vehicle_model": "Legacy",
+    "vehicle_year": 2008,
+    "vehicle_vin": "WAUET48H55K255945",
+    "vehicle_color": "Maroon",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Volkswagen",
+    "vehicle_model": "GTI",
+    "vehicle_year": 2000,
+    "vehicle_vin": "1FT7W2A63EE731315",
+    "vehicle_color": "Yellow",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "Charger",
+    "vehicle_year": 1969,
+    "vehicle_vin": "JN1CV6FE5FM806263",
+    "vehicle_color": "Fuscia",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Chevrolet",
+    "vehicle_model": "SSR",
+    "vehicle_year": 2005,
+    "vehicle_vin": "4T1BF1FKXDU182354",
+    "vehicle_color": "Maroon",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "Fiesta",
+    "vehicle_year": 2011,
+    "vehicle_vin": "WBA3A5C52DF240844",
+    "vehicle_color": "Maroon",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "Stratus",
+    "vehicle_year": 2001,
+    "vehicle_vin": "4A4AP3AU1EE237960",
+    "vehicle_color": "Violet",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Toyota",
+    "vehicle_model": "4Runner",
+    "vehicle_year": 1994,
+    "vehicle_vin": "WBA3T7C56F5176175",
+    "vehicle_color": "Violet",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Toyota",
+    "vehicle_model": "Prius Plug-in",
+    "vehicle_year": 2012,
+    "vehicle_vin": "SCBFU7ZA8DC719412",
+    "vehicle_color": "Purple",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "Econoline E350",
+    "vehicle_year": 2001,
+    "vehicle_vin": "KM8JT3AF6EU880276",
+    "vehicle_color": "Puce",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Mazda",
+    "vehicle_model": "626",
+    "vehicle_year": 1995,
+    "vehicle_vin": "1C4RDHAG1CC622597",
+    "vehicle_color": "Goldenrod",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Mercedes-Benz",
+    "vehicle_model": "S-Class",
+    "vehicle_year": 2011,
+    "vehicle_vin": "2G4G05GVXB9927475",
+    "vehicle_color": "Purple",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Eagle",
+    "vehicle_model": "Summit",
+    "vehicle_year": 1996,
+    "vehicle_vin": "JTDKDTB30F1120454",
+    "vehicle_color": "Turquoise",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Chrysler",
+    "vehicle_model": "Sebring",
+    "vehicle_year": 2005,
+    "vehicle_vin": "SCBLF34F94C115439",
+    "vehicle_color": "Mauv",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Pontiac",
+    "vehicle_model": "GTO",
+    "vehicle_year": 2006,
+    "vehicle_vin": "5FNRL5H27BB123851",
+    "vehicle_color": "Green",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Nissan",
+    "vehicle_model": "370Z",
+    "vehicle_year": 2009,
+    "vehicle_vin": "1G6DL8E36D0789452",
+    "vehicle_color": "Yellow",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Audi",
+    "vehicle_model": "A8",
+    "vehicle_year": 2006,
+    "vehicle_vin": "4T1BF1FK4FU082527",
+    "vehicle_color": "Orange",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "Challenger",
+    "vehicle_year": 2010,
+    "vehicle_vin": "1G6DJ5EV3A0995538",
+    "vehicle_color": "Purple",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "F150",
+    "vehicle_year": 2007,
+    "vehicle_vin": "WBABD53465P468593",
+    "vehicle_color": "Fuscia",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Kia",
+    "vehicle_model": "Spectra",
+    "vehicle_year": 2009,
+    "vehicle_vin": "SCBCP73W38C027627",
+    "vehicle_color": "Green",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Kia",
+    "vehicle_model": "Sportage",
+    "vehicle_year": 2000,
+    "vehicle_vin": "WAUHGBFC5EN813787",
+    "vehicle_color": "Turquoise",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "Fiesta",
+    "vehicle_year": 2013,
+    "vehicle_vin": "WBAXA5C55ED009726",
+    "vehicle_color": "Aquamarine",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Lincoln",
+    "vehicle_model": "LS",
+    "vehicle_year": 2006,
+    "vehicle_vin": "1G6DP1E38D0568060",
+    "vehicle_color": "Fuscia",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "Ranger",
+    "vehicle_year": 2006,
+    "vehicle_vin": "4A31K3DT1AE553245",
+    "vehicle_color": "Goldenrod",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Mazda",
+    "vehicle_model": "626",
+    "vehicle_year": 2001,
+    "vehicle_vin": "1GYS3TKJ8FR138956",
+    "vehicle_color": "Turquoise",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Volvo",
+    "vehicle_model": "960",
+    "vehicle_year": 1995,
+    "vehicle_vin": "1GTN1TEH6FZ228866",
+    "vehicle_color": "Khaki",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Audi",
+    "vehicle_model": "S4",
+    "vehicle_year": 2005,
+    "vehicle_vin": "WAUDF78EX8A826091",
+    "vehicle_color": "Blue",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Nissan",
+    "vehicle_model": "Altima",
+    "vehicle_year": 1998,
+    "vehicle_vin": "JM1NC2LF4E0569059",
+    "vehicle_color": "Aquamarine",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Volkswagen",
+    "vehicle_model": "Jetta",
+    "vehicle_year": 1988,
+    "vehicle_vin": "WAUFGAFBXAN006975",
+    "vehicle_color": "Green",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Pontiac",
+    "vehicle_model": "Firebird",
+    "vehicle_year": 1999,
+    "vehicle_vin": "1G6DX67D370285301",
+    "vehicle_color": "Goldenrod",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Ford",
+    "vehicle_model": "Bronco",
+    "vehicle_year": 1993,
+    "vehicle_vin": "JN8AF5MR2BT511515",
+    "vehicle_color": "Pink",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "D150 Club",
+    "vehicle_year": 1993,
+    "vehicle_vin": "5J8TB4H30GL772103",
+    "vehicle_color": "Orange",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Cadillac",
+    "vehicle_model": "DeVille",
+    "vehicle_year": 1997,
+    "vehicle_vin": "JH4CL96934C933456",
+    "vehicle_color": "Teal",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Nissan",
+    "vehicle_model": "JUKE",
+    "vehicle_year": 2011,
+    "vehicle_vin": "1FTEW1CM1EK398594",
+    "vehicle_color": "Turquoise",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Acura",
+    "vehicle_model": "RSX",
+    "vehicle_year": 2004,
+    "vehicle_vin": "1GKS1HE02CR061688",
+    "vehicle_color": "Yellow",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Chevrolet",
+    "vehicle_model": "Silverado",
+    "vehicle_year": 2009,
+    "vehicle_vin": "3N1CN7AP0EL899636",
+    "vehicle_color": "Indigo",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Chevrolet",
+    "vehicle_model": "Caprice",
+    "vehicle_year": 1994,
+    "vehicle_vin": "WBAXH5C55CD694724",
+    "vehicle_color": "Teal",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Aston Martin",
+    "vehicle_model": "V8 Vantage",
+    "vehicle_year": 2009,
+    "vehicle_vin": "1C3CDZCB2DN354201",
+    "vehicle_color": "Red",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Pontiac",
+    "vehicle_model": "Tempest",
+    "vehicle_year": 1967,
+    "vehicle_vin": "WA1DGAFE0FD165905",
+    "vehicle_color": "Goldenrod",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Land Rover",
+    "vehicle_model": "Discovery",
+    "vehicle_year": 1996,
+    "vehicle_vin": "1J4NF1GB7BD481338",
+    "vehicle_color": "Aquamarine",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Acura",
+    "vehicle_model": "TL",
+    "vehicle_year": 1998,
+    "vehicle_vin": "JN1BJ0HP6FM818893",
+    "vehicle_color": "Red",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Chevrolet",
+    "vehicle_model": "Silverado 3500",
+    "vehicle_year": 2006,
+    "vehicle_vin": "WAUDH78E68A736494",
+    "vehicle_color": "Fuscia",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Volkswagen",
+    "vehicle_model": "Passat",
+    "vehicle_year": 1985,
+    "vehicle_vin": "WAUNF78PX8A902947",
+    "vehicle_color": "Khaki",
+    "vehicle_license_plate": "DEF789"
+  },
+  {
+    "vehicle_make": "Mercedes-Benz",
+    "vehicle_model": "G-Class",
+    "vehicle_year": 2002,
+    "vehicle_vin": "1G6YX36D895465316",
+    "vehicle_color": "Teal",
+    "vehicle_license_plate": "XYZ456"
+  },
+  {
+    "vehicle_make": "Chevrolet",
+    "vehicle_model": "Malibu Maxx",
+    "vehicle_year": 2006,
+    "vehicle_vin": "1G6DP577150413701",
+    "vehicle_color": "Khaki",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Lamborghini",
+    "vehicle_model": "Murciélago",
+    "vehicle_year": 2008,
+    "vehicle_vin": "1GYS4PKJ6FR889722",
+    "vehicle_color": "Crimson",
+    "vehicle_license_plate": "ABC123"
+  },
+  {
+    "vehicle_make": "Dodge",
+    "vehicle_model": "D150",
+    "vehicle_year": 1992,
+    "vehicle_vin": "JN8AF5MR2ET926306",
+    "vehicle_color": "Puce",
+    "vehicle_license_plate": "DEF789"
+  }
+]

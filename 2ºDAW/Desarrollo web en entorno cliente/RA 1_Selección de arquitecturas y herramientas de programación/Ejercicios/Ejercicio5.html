@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+
+    <h2>Página web multilingüe</h2>
+    <p>Seleccione el idioma que desee: </p>
+
+    <button onclick="espaniol()">Español</button>
+    <button onclick="ingles()">English</button>
+    <button onclick="ruso()">Русский</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+        function espaniol(){
+            document.getElementById("mensaje").innerHTML = "¡Bienvenido a esta página web!";
+        }
+
+        function ingles(){
+            document.getElementById("mensaje").innerHTML = "Welcome to this webside!";
+        }
+
+        function ruso(){
+            document.getElementById("mensaje").innerHTML = "Добро пожаловать на этот сайт!";
+        }
+    </script>
+
+
+    </script>
+
+</body>
+
+</html>

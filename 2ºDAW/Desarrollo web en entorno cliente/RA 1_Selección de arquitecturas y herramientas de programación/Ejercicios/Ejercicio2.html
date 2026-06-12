@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <h1>Cambio de imágenes con JavaScript</h1>
+    <img id="myFPImage" onclick="cambiaPic()"
+        src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/D445/production/_106414345_playaelsalvador.jpg.webp"
+        width="220" height="180" alt="CambiarImagen">
+    <p>Haz click sobre la imagen para cambiarla.</p>
+    <script>
+        function cambiaPic() {
+            var image = document.getElementById("myFPImage");
+            if (image.src.match("playaelsalvador")) {
+                image.src = "https://d36tnp772eyphs.cloudfront.net/blogs/2/2017/08/01-ciudad-de-mexico.jpg";
+
+            } else if (image.src.match("ciudad-de-mexico")) {
+                image.src = "https://quo.eldiario.es/wp-content/uploads/2019/10/paisajes-maravillosos.jpg";
+
+            } else if (image.src.match("paisajes")) {
+                image.src = "https://content.nationalgeographic.com.es/medio/2020/11/16/mars_a032dcfb_1600x2000.jpg";
+
+            } else if (image.src.match("mars")) {
+                image.src = "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/D445/production/_106414345_playaelsalvador.jpg.webp";
+
+            }
+        }
+    </script>
+</body>
+
+</html>

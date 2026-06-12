@@ -1,0 +1,6 @@
+codParque;nombre;direccion;ciudad;metrosCuadrados;capacidadMaxima
+1;Parque Aventura;Calle 1;Madrid;5000;1000
+2;Diversion Park;Calle 2;Barcelona;6000;1200
+3;Magic World;Calle 3;Valencia;7000;1500
+4;FunLand;Calle 4;Sevilla;5500;1100
+5;AquaPark;Calle 5;Málaga;8000;2000
