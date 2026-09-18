@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+
+<body>
+
+    <h1>Preferencia de tema</h1>
+
+    <label for="tema">Selecciona un tema:</label>
+
+    <select id="tema">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+
+    <br><br>
+
+    <button id="guardar">Guardar</button>
+    <button id="recuperar">Recuperar</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+
+        // Función para guardar el tema en localStorage
+        const guardarTema = (tema) => {
+            localStorage.setItem("tema", tema);
+        };
+
+        // Función para recuperar el tema y devolver un mensaje
+        const recuperarTema = () => {
+            let tema = localStorage.getItem("tema");
+
+            if (tema == "dark") {
+                return "¡Bienvenido! Has elegido el tema oscuro.";
+            } else if (tema == "light") {
+                return "¡Bienvenido! Has elegido el tema claro.";
+            } else {
+                return "No hay ningún tema guardado.";
+            }
+        };
+
+        // Botón guardar
+        document.getElementById("guardar").addEventListener("click", () => {
+
+            let tema = document.getElementById("tema").value;
+
+            guardarTema(tema);
+
+            document.getElementById("mensaje").textContent =
+                "Tema guardado correctamente.";
+        });
+
+        // Botón recuperar
+        document.getElementById("recuperar").addEventListener("click", () => {
+
+            let mensaje = recuperarTema();
+
+            document.getElementById("mensaje").textContent = mensaje;
+        });
+
+    </script>
+
+</body>
+
+</html>

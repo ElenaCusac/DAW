@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secuencia De Karratraka</title>
+</head>
+
+<body>
+
+    <p id="secuencia">Secuencia de Karratraka: </p>
+
+    <script>
+        let cantidad = 10;
+
+        let anterior = 1;
+        let actual = 1;
+
+        let secuencia = "1 1";
+
+        for (let i = 2; i < cantidad; i++) {
+            let siguiente = anterior + actual + 1;
+
+            secuencia += " " + siguiente;
+
+            anterior = actual;
+            actual = siguiente;
+        }
+
+        document.getElementById("secuencia").textContent += secuencia;
+    </script>
+
+</body>
+
+</html>

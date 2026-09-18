@@ -1,0 +1,6 @@
+Crea un script que detecte cuántas veces ha navegado o recargado el usuario 
+la página en la sesión actual. Cada vez que cargue la página, debe incrementar 
+el contador guardado en sessionStorage y mostrar un mensaje como: 
+"Has visitado esta página X veces en esta sesión".
+
+Pistas: sessionStorage
