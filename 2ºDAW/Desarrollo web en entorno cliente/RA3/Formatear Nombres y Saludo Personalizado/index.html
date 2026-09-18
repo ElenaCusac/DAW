@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formateador nombres</title>
+
+</head>
+
+<body>
+
+    <p>
+        <label>Introduce tu nombre completo: </label>
+        <input type="text" name="nombre" id="nombre">
+    </p>
+
+    <button id="enviar">Enviar</button>
+
+    <br><br>
+
+    <p id="mensaje"></p>
+
+    <script>
+
+        function formatearNombre(nombre) {
+
+            // Quitamos los espacios del principio y del final
+            nombre = nombre.trim();
+
+            // Separamos el nombre en palabras
+            let palabras = nombre.split(" ");
+
+            // Recorremos todas las palabras
+            for (let i = 0; i < palabras.length; i++) {
+
+                // Ponemos la primera letra en mayúscula
+                // y el resto en minúscula
+                palabras[i] = palabras[i].charAt(0).toUpperCase() +
+                              palabras[i].slice(1).toLowerCase();
+            }
+
+            // Volvemos a unir las palabras
+            nombre = palabras.join(" ");
+
+            // Devolvemos el saludo
+            return "¡Hola, " + nombre + "!";
+        }
+
+
+        document.getElementById("enviar").addEventListener("click", () => {
+
+            // Obtenemos el nombre introducido
+            let nombre = document.getElementById("nombre").value;
+
+            // Formateamos el nombre
+            let saludo = formatearNombre(nombre);
+
+            // Mostramos el saludo
+            document.getElementById("mensaje").textContent = saludo;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

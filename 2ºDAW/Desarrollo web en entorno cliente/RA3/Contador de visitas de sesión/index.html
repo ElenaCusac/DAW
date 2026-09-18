@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitas de Sesión</title>
+</head>
+
+<body>
+
+    <p id="mensaje"></p>
+
+    <script>
+        // Obtenemos el número de visitas guardado
+        let visitas = sessionStorage.getItem("visitas");
+
+        // Si no existe, empezamos desde 0
+        if (visitas == null) {
+            visitas = 0;
+        }
+
+        // Incrementamos el contador
+        visitas++;
+
+        // Guardamos el nuevo número de visitas
+        sessionStorage.setItem("visitas", visitas);
+
+        // Mostramos el mensaje
+        document.getElementById("mensaje").textContent =
+            "Has visitado esta página " + visitas + " veces en esta sesión";
+    </script>
+
+</body>
+
+</html>

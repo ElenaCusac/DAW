@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Sumatorio de un array</title>
+</head>
+<body>
+
+<h1>Encuentra cuantas veces aparece un número en un array multidimensional</h1>
+
+<script>
+
+    let numeros = [1,[2,3,4],[8,15,[5,1]],27];
+
+    let numeroBuscado = 1;
+    let contador = 0;
+
+    function contarNumero(array) {
+
+        for (let i = 0; i < array.length; i++) {
+
+            if (Array.isArray(array[i])) {
+                contarNumero(array[i]);
+            } else if (array[i] == numeroBuscado) {
+                contador++;
+            }
+
+        }
+
+    }
+
+    contarNumero(numeros);
+
+    document.write("El número " + numeroBuscado + " aparece " + contador + " veces.");
+
+</script>
+
+</body>
+</html>

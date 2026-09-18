@@ -1,0 +1,1 @@
+Escribe una función flecha que reciba un mensaje en texto y un número de segundos. La función debe transformar el texto a mayúsculas y, tras esperar el tiempo especificado usando setTimeout(), mostrarlo por pantalla. 

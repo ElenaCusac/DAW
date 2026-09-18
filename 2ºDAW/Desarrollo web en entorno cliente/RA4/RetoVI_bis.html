@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombres de actores</title>
+</head>
+
+<body>
+
+    <p id="actorerJason">Actores llamados Jason: </p><br>
+    <p id="apellido"></p>
+
+    <script>
+        const XUNGOS = [
+            "Arnold Schwarzenegger",
+            "Bruce Lee",
+            "Bruce Willis",
+            "Chuck Norris",
+            "Cliff Curtis",
+            "Clint Eastwood",
+            "Colin Farrell",
+            "Daniel Craig",
+            "Danny Trejo",
+            "Dave Bautista",
+            "Denzel Washington",
+            "Dolph Lundgren",
+            "Donnie Yen",
+            "Dwayne Johnson",
+            "Frank Grillo",
+            "Gary Daniels",
+            "Gerard Butler",
+            "Harrison Ford",
+            "Hiroyuki Sanada",
+            "Iko Uwais",
+            "Jacky Wu Jing",
+            "Jackie Chan",
+            "Jason Clarke",
+            "Jason Statham",
+            "Jean-Claude Van Damme",
+            "Jet Li",
+            "John Cena",
+            "Keanu Reeves",
+            "Liam Neeson",
+            "Mark Dacascos",
+            "Mark Adkinsgrant",
+            "Jason Clarke",
+            "Jason Statham",
+            "Jean-Claude Van Damme",
+            "Jet Li",
+            "John Cena",
+            "Keanu Reeves",
+            "Liam Neeson",
+            "Mark Adkinson",
+            "Mark Wahlberg",
+            "Jason Clarke",
+            "Jason Statham",
+            "Jean-Claude Van Damme",
+            "Jet Li",
+            "John Cena",
+            "Keanu Reeves",
+            "Liam Neeson",
+            "Mark Dacascos",
+            "Mark Wahlberg",
+            "Mel Gibson",
+            "Michael Jai White",
+            "Michelle Yeoh",
+            "Milla Jovovich",
+            "Nicolas Cage",
+            "Pedro Pascal",
+            "Pierce Brosnan",
+            "Ray Stevenson",
+            "Rhona Mitra",
+            "Scott Adkins",
+            "Sean Connery",
+            "Steven Seagal",
+            "Sylvester Stallone",
+            "Tetchi Agbayani",
+            "Tom Cruise",
+            "Tony Jaa",
+            "Vin Diesel",
+            "Wesley Snipes",
+            "Zoe Saldana"
+        ]
+
+        //  Cuántos de estos actores se llaman Jason (no repetidos). 
+        let actoresJason = [...new Set(
+            XUNGOS.filter(nombre =>
+                nombre.toLocaleLowerCase().includes("jason")
+            )
+        )];
+
+        document.getElementById("actorerJason").innerHTML += actoresJason.join(", ");
+
+        // Apellido Adkins
+        let actoresAdkins = XUNGOS.filter((actor) =>
+            actor.toLowerCase().split(" ").find(palabra => palabra === "adkins")
+        );
+
+
+        if (actoresAdkins.length === 0) {
+            document.getElementById("apellido").innerText = "NO EXISTE";
+        } else {
+            document.getElementById("apellido").innerHTML = actoresAdkins.join("<br>");
+        }
+
+
+    </script>
+
+</body>
+
+</html>
