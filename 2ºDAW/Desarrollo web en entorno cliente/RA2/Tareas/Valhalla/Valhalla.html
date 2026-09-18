@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VALHALLA</title>
+</head>
+
+<body>
+
+    <script>
+
+        let arr = ["C", "U", "S", "R", "U", "X"];
+        function bergdahlASDP(simbolos) {
+            const valores = {
+                U: 1,
+                S: 7,
+                D: 10,
+                C: 50,
+                X: 100
+            };
+
+            let resultado = 0;
+            let resta = false;
+
+            for (const simbolo of simbolos) {
+                if (simbolo === "R") {
+                    resta = true;
+                    continue;
+                }
+
+                const valor = valores[simbolo];
+
+                if (resta) {
+                    resultado -= valor;
+                    resta = false;
+                } else {
+                    resultado += valor;
+                }
+            }
+
+            return resultado;
+        }
+
+        console.log(valhalla(arr))
+    </script>
+</body>
+
+</html>

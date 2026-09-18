@@ -1,0 +1,2 @@
+Realiza un programa el cual reciba un texto determinado y muestre una lista de las palabras introducidas de forma alfabética junto con el número de veces que aparece esa palabra.
+Se obviará todo lo que no sea una palabra como puntos, comas, etc.

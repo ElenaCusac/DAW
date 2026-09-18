@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de palabras</title>
+</head>
+
+<body>
+
+    <h2>Contador de palabras</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        var texto = prompt("Introduce un texto:");
+
+        // Convertimos todo el texto a minúsculas
+        texto = texto.toLowerCase();
+
+        // Eliminamos todo lo que no sean letras o espacios
+        texto = texto.replace(/[^a-záéíóúüñ\s]/g, "");
+
+        // Separamos las palabras
+        var palabras = texto.split(" ");
+
+        // Ordenamos las palabras alfabéticamente
+        palabras.sort();
+
+        var resultado = "";
+
+        for (var i = 0; i < palabras.length; i++) {
+
+            // Ignoramos los espacios vacíos
+            if (palabras[i] != "") {
+
+                var contador = 1;
+
+                // Comprobamos si la palabra aparece otra vez
+                for (var j = i + 1; j < palabras.length; j++) {
+
+                    if (palabras[i] == palabras[j]) {
+                        contador++;
+                    }
+                }
+
+                // Evitamos volver a mostrar una palabra que ya hemos contado
+                if (i == 0 || palabras[i] != palabras[i - 1]) {
+                    resultado += palabras[i] + ": " + contador + "<br>";
+                }
+            }
+        }
+
+        document.getElementById("demo").innerHTML = resultado;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+Realiza un programa al que se le introduzca un texto y devuelva el mismo texto pero con las letras invertidas. Por ejemplo la entrada:
+
+Buenos días hoy es lunes
+Daría la salida:
+soneuB saíd yoh se senul
+
+
+truco: prueba el siguiente código...
+let text = "Hello world!";
+let result = text.substring(1, 4);
+
+substring() extrae parte de un string.
