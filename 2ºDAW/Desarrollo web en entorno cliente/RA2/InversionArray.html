@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Invertir letras de un texto</h2>
+
+    <p id="demo"></p>
+
+    <script>
+
+        var texto = prompt("Introduce un texto:");
+
+        var palabras = texto.split(" ");
+
+        var resultado = "";
+
+        for (var i = 0; i < palabras.length; i++) {
+
+            for (var j = palabras[i].length; j > 0; j--) {
+                resultado += palabras[i].substring(j - 1, j);
+            }
+
+            resultado += " ";
+        }
+
+        document.getElementById("demo").innerHTML = resultado;
+
+    </script>
+
+</body>
+
+</html>
