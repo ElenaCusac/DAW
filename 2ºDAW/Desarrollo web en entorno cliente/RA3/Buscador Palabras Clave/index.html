@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de palabras</title>
+</head>
+
+<body>
+
+    <h1>Buscador de palabras</h1>
+
+    <p id="resultado"></p>
+    <p id="historial"></p>
+
+    <script>
+
+        let texto = "JavaScript es un lenguaje de programación muy utilizado para desarrollar páginas web. JavaScript permite crear páginas interactivas.";
+
+        // Función flecha para buscar una palabra
+        let buscarPalabra = (texto, palabra) => {
+
+            // Convertimos todo a minúsculas
+            let textoMinusculas = texto.toLowerCase();
+            let palabraMinusculas = palabra.toLowerCase();
+
+            // Comprobamos si la palabra está en el texto
+            let encontrada = textoMinusculas.includes(palabraMinusculas);
+
+            // Obtenemos el historial de localStorage
+            let historial = JSON.parse(localStorage.getItem("historialBusquedas")) || [];
+
+            // Añadimos la palabra buscada
+            historial.push(palabra);
+
+            // Guardamos de nuevo el historial
+            localStorage.setItem("historialBusquedas", JSON.stringify(historial));
+
+            return encontrada;
+        };
+
+
+        // Realizamos una búsqueda
+        let palabra = "JAVASCRIPT";
+
+        let resultado = buscarPalabra(texto, palabra);
+
+
+        // Mostramos el resultado
+        if (resultado) {
+            document.getElementById("resultado").textContent =
+                "La palabra \"" + palabra + "\" está presente en el texto.";
+        } else {
+            document.getElementById("resultado").textContent =
+                "La palabra \"" + palabra + "\" NO está presente en el texto.";
+        }
+
+
+        // Mostramos el historial
+        let historialGuardado =
+            JSON.parse(localStorage.getItem("historialBusquedas")) || [];
+
+        document.getElementById("historial").textContent =
+            "Historial de búsquedas: " + historialGuardado.join(", ");
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador</title>
+</head>
+
+<body>
+
+    <p>
+        <label for="email">Introduce tu email: </label>
+        <input type="email" name="email" id="email">
+    </p>
+    <p>
+        <button id="btnEnviar">Enviar</button>
+    </p>
+
+    <script>
+        let correo = document.getElementById("email").value;
+
+        const validarEmail = (email) => {
+            // Comprobar que no tenga espacios
+            if (email.includes(" ")) {
+                return false;
+            }
+
+            // Comprogar que tenga @
+            if (!email.includes("@")) {
+                return false;
+            }
+
+            // Comprobar que tenga exactamente un @
+            if (email.indexOf("@") !== email.lastIndexOf("@")) {
+                return false;
+            }
+
+            // Comprobar que termine en .com o .es
+            if (!email.endsWith(".com") && !email.endsWith(".es")) {
+                return false;
+            }
+
+            return true;
+        };
+
+    </script>
+
+</body>
+
+</html>

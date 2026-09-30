@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrador de Sesión</title>
+</head>
+
+<body>
+    <h1>Editor de texto</h1>
+
+    <textarea id="texto" rows="10" cols="50"> Este es mi borrador.</textarea>
+
+    <p id="estado">Esperando al autoguardado...</p>
+
+    <script>
+
+        let contenido = "";
+
+        const guardarBorrador = () => {
+
+            contenido = document.getElementById("texto").value;
+
+            sessionStorage.setItem("borrador", contenido);
+
+            document.getElementById("estado").textContent =
+                "Borrador guardado correctamente: " + new Date().toLocaleTimeString();
+        };
+
+        setInterval(guardarBorrador, 5000);
+
+    </script>
+</body>
+
+</html>

@@ -4,12 +4,9 @@ function es_todo_letras($texto) {
     $todo_letras = true;
 
     for ($i = 0; $i < strlen($texto); $i++) { 
-        if (
-            !(
-                (ord($texto[$i]) >= ord("A") && ord($texto[$i]) <= ord("Z")) ||
-                (ord($texto[$i]) >= ord("a") && ord($texto[$i]) <= ord("z"))
-            )
-        ) {
+        if (!((ord($texto[$i]) >= ord("A") && ord($texto[$i]) <= ord("Z")) ||
+            (ord($texto[$i]) >= ord("a") && ord($texto[$i]) <= ord("z")))) {
+
             $todo_letras = false;
             break;
         }
