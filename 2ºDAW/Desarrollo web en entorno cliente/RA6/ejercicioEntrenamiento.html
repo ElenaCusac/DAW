@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTRENAMIENTO JS RA6</title>
+</head>
+
+<body>
+    <h1>Catálogo de patinetes eléctricos</h1>
+
+    <p>
+        <input type="checkbox" id="urbano" name="urbano">
+        <label for="urbano">Urbano</label>
+
+        <input type="checkbox" id="distancia" name="distancia">
+        <label for="distancia">Larga distancia</label>
+
+        <input type="checkbox" id="todoterreno" name="todoterreno">
+        <label for="todoterreno">Todoterreno</label>
+    </p>
+
+    <p id="botones"></p>
+
+    <script>
+        var patinetesJSON = '{"patinetes":[{"id":1,"nombre":"Xiaomi Scooter 4 Pro","categoria":"Urbano","padreId":null},{"id":2,"nombre":"Xiaomi Scooter Essential","categoria":"Urbano","padreId":1},{"id":3,"nombre":"Ninebot Segway MAX G30","categoria":"Larga Distancia","padreId":null},{"id":4,"nombre":"Ninebot F40E","categoria":"Urbano","padreId":3},{"id":5,"nombre":"Cecotec Bongo Serie Z","categoria":"Todoterreno","padreId":null},{"id":6,"nombre":"SmartGyro CrossOver Dual","categoria":"Todoterreno","padreId":5}]}';
+
+        let patinetes = JSON.parse(patinetesJSON).patinetes;
+
+        let checkedUrbano = document.getElementById("urbano");
+        let checkedDistancia = document.getElementById("distancia");
+        let checkedTodoterreno = document.getElementById("todoterreno");
+
+        function mostrarBotones(categoria) {
+
+            patinetes.filter((patinete) => patinete.categoria == categoria)
+                .forEach((patinete) => {
+
+                    let boton = document.createElement("button");
+                    let textoBoton = "";
+
+                    if (patinete.padreId === null) {
+                        textoBoton += "Modelo Base: ";
+                    } else {
+                        textoBoton += "Submodelo: ";
+                    }
+
+                    textoBoton += patinete.nombre + " (" + patinete.categoria + ")";
+
+                    boton.textContent = textoBoton;
+
+                    document.getElementById("botones").appendChild(boton);
+
+                    boton.onclick = () => boton.remove();
+
+                });
+        }
+
+        function filtrarBotones() {
+
+            // Borramos los botones anteriores
+            document.getElementById("botones").innerHTML = "";
+
+            if (checkedUrbano.checked) {
+                mostrarBotones("Urbano");
+            }
+
+            if (checkedDistancia.checked) {
+                mostrarBotones("Larga Distancia");
+            }
+
+            if (checkedTodoterreno.checked) {
+                mostrarBotones("Todoterreno");
+            }
+        }
+
+        checkedUrbano.addEventListener("change", filtrarBotones);
+        checkedDistancia.addEventListener("change", filtrarBotones);
+        checkedTodoterreno.addEventListener("change", filtrarBotones);
+
+        filtrarBotones();
+
+    </script>
+</body>
+
+</html>

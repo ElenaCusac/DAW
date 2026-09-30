@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo patinetes</title>
+</head>
+
+<body>
+    <h1>Catalogo patinetes</h1>
+    <p id="resultado"></p>
+
+    <h1>DESCATALOGADOS</h1>
+    <p id="descatalogados"></p>
+
+    <input type="number" id="patinete">
+    <button id="btnDescatalogar">descatalogar</button>
+
+    <script>
+        let patinetesJSON = '{"patinetes":[{"id":1,"nombre":"Xiaomi Scooter 4 Pro","categoria":"Urbano","padreId":null},{"id":2,"nombre":"Xiaomi Scooter Essential","categoria":"Urbano","padreId":1},{"id":3,"nombre":"Ninebot Segway MAX G30","categoria":"Larga Distancia","padreId":null},{"id":4,"nombre":"Ninebot F40E","categoria":"Urbano","padreId":3},{"id":5,"nombre":"Cecotec Bongo Serie Z","categoria":"Todoterreno","padreId":null},{"id":6,"nombre":"SmartGyro CrossOver Dual","categoria":"Todoterreno","padreId":5}]}';
+        let array = JSON.parse(patinetesJSON);
+        let resultado = document.getElementById("resultado");
+        let descatalogados = document.getElementById("descatalogados");
+        let arrayDescatalogados = []
+
+        let btnDescatalogar = document.getElementById("btnDescatalogar");
+
+        // Pintar los patinetes
+        array["patinetes"].map(p => {
+
+            let boton = document.createElement("button");
+
+            boton.textContent = (p.id + "; " + p.nombre + "; " + p.categoria + "; " + p.padreId);
+
+            boton.id = p.id;
+
+            boton.onclick = () => cambiarSeccion(boton);
+            resultado.appendChild(boton);;
+
+        });
+
+        // Descatalogar
+        btnDescatalogar.onclick = () => {
+            let idPatinete = document.getElementById("patinete").value;
+            let boton = document.getElementById(idPatinete);
+
+            if (boton != null) {
+                boton.remove();
+                descatalogados.appendChild(boton);
+
+                arrayDescatalogados.push(idPatinete);
+            }
+
+            boton.onclick = () => cambiarSeccion(boton);
+
+        };
+
+        const cambiarSeccion = (boton) => {
+            if (boton.parentElement.id == "resultado") {
+                resultado.removeChild(boton);
+                descatalogados.appendChild(boton);
+                arrayDescatalogados.push(boton);
+
+            } else {
+                descatalogados.removeChild(boton);
+                resultado.appendChild(boton);
+                
+                arrayDescatalogados.filter(() => {
+                    
+                });
+            }
+
+        };
+
+
+        console.log(arrayDescatalogados);
+
+    </script>
+
+
+</body>
+
+</html>

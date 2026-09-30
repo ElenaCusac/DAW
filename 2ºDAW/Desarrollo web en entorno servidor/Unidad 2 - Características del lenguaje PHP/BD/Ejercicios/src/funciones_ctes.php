@@ -18,7 +18,7 @@ function error_page($title, $body) {
                 '.$body.'
             </body>
 
-            </html>'
+            </html>';
 }
 
 // Intentar hacer la conexión
@@ -27,8 +27,7 @@ try {
     mysqli_set_charset($conexion, "utf8mb4");
 
 } catch (mysqli_sql_exception $e) {
-    die (error_page("Práctica 1 - BD", "<h1>Práctica 1 - BD</h1><p>Error: No se ha podido conectar a la base de datos:" .$e->getMessage(). "</p>"))
-    die("<p>");
+    die (error_page("Práctica 1 - BD", "<h1>Práctica 1 - BD</h1><p>Error: No se ha podido conectar a la base de datos:" .$e->getMessage(). "</p>"));
 }
 
 // Intentar hacer una consulta a la tabla asignaturas

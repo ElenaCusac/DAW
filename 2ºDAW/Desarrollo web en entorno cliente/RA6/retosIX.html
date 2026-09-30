@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retos JavaScript</title>
+</head>
+
+<body>
+    <h1>Retos JavaScript</h1>
+    <ul id="carrakos"></ul>
+
+    <script>
+        let carrakos = ["Chevrolet", "Tesla", "BMW", ["Honda", "Infiniti", ["Lexus", "Mercedes", "Kia"], "Hyunday"], ["Mazda", "Mercedes", "Jeep", ["KTM", "Nissan", "Isuzu"]]];
+        let xungos = [
+            { nombre: "Bruce Lee", carros: ["Chevrolet", "Tesla", "BMW"] },
+            { nombre: "YakiChan", carros: ["Lexus", "Mercedes", "Kia"] }
+        ];
+
+        // Se pide que saques los coches del array pero si tienen dueño lo especifiques.
+        function esArray(array) {
+            let lista = document.createElement("ul");
+
+            array.map((coche) => {
+                let elementoLista = document.createElement("li");
+
+                if (Array.isArray(coche)) {
+                    elementoLista.appendChild(esArray(coche));
+                } else {
+
+                    let famoso = xungos.find((famoso) =>
+                        famoso.carros.find((carro) => carro === coche)
+                    );
+
+                    if (famoso) {
+                        elementoLista.textContent = coche + " de " + famoso.nombre;
+                    } else {
+                        elementoLista.textContent = coche;
+                    }
+                }
+
+                lista.appendChild(elementoLista);
+            });
+
+            return lista;
+        }
+
+        // Se muestran los datos del array en forma arborescente.
+        let lista = esArray(carrakos);
+
+        document.getElementById("carrakos").appendChild(lista);
+
+    </script>
+</body>
+</html>

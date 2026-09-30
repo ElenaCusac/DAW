@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto VII</title>
+</head>
+
+<body>
+    <h1>Retos JavaScript</h1>
+    <ul id="carrakos"></ul>
+
+    <script>
+        var carrakos = ["Chevrolet", "Tesla", "BMW", ["Honda", "Infiniti", ["Lexus", "Mercedes", "Kia"], "Hyunday"], ["Mazda", "Mercedes", "Jeep", ["KTM", "Nissan", "Isuzu"]]];
+
+        function esArray(array) {
+            let lista = document.createElement("ul");
+
+            array.map((coche) => {
+                if (Array.isArray(coche)) {
+                    let elementoLista = document.createElement("li");
+                    elementoLista.appendChild(esArray(coche));
+                    lista.appendChild(elementoLista);
+                } else {
+                    let elementoLista = document.createElement("li");
+                    elementoLista.textContent = coche.toString();
+                    lista.appendChild(elementoLista);
+                }
+            });
+
+            return lista;
+        }
+
+        // Se muestran los datos del array en forma arborescente.
+        let lista = esArray(carrakos);
+        document.getElementById("carrakos").appendChild(lista);
+    </script>
+</body>
+
+</html>

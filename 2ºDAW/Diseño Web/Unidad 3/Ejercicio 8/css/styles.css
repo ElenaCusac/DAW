@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    flex-flow: column;
+}
+
+header>p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 2.5rem;
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header>p>span:nth-child(1) {
+    display: none;
+}
+
+/* Contenedor principal */
+header>div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3.5rem;
+    padding: 0 1rem;
+}
+
+/* Logotipo */
+header>div:nth-of-type(1)>svg:nth-child(1) {
+    width: 3rem;
+    height: 3rem;
+    order: 3;
+}
+
+/* Menú */
+header>div:nth-of-type(1)>nav {
+    display: contents;
+}
+
+header>div:nth-of-type(1)>nav>label {
+    order: 1;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header>div:nth-of-type(1)>nav>input {
+    display: none;
+}
+
+header>div:nth-of-type(1)>nav>ul {
+    display: none;
+}
+
+/* Mostrar Menú */
+header>div:nth-of-type(1)>nav>input:checked~ul {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    margin: 0;
+    z-index: 10;
+}
+
+header>div:nth-of-type(1)>nav>ul>li {
+    padding: 1rem;
+}
+
+header>div:nth-of-type(1)>nav>ul>li>a {
+    font-size: 14px;
+}
+
+/* Iconos */
+header>div:nth-of-type(1)>svg#corazon {
+    order: 2;
+}
+
+header>div:nth-of-type(1)>svg#usuario {
+    order: 4;
+}
+
+header>div:nth-of-type(1)>svg#carro {
+    order: 6;
+}
+
+/* Buscador */
+header>div:nth-of-type(1)>div#buscador {
+    display: flex;
+    align-items: center;
+    order: 5;
+}
+
+header>div:nth-of-type(1)>div#buscador>input {
+    display: none;
+}
+
+header>div:nth-of-type(1)>div#buscador>svg {
+    width: 24px;
+    height: 24px;
+}
+
+header svg {
+    cursor: pointer;
+}
+
+/* Aviso promocional */
+header>div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: #ebedef;
+    padding: 0 2.5rem;
+}
+
+header>div:nth-of-type(2)>p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+header>div:nth-of-type(2)>svg {
+    position: absolute;
+    right: 1rem;
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* Barra begra */
+    header>p {
+        height: 2rem;
+    }
+
+    header>p>span:nth-child(1) {
+        display: inline;
+        margin-right: 5px;
+    }
+
+    /* Contenedor principal */
+    header>div:nth-of-type(1) {
+        height: 4.2rem;
+        justify-content: space-between;
+        padding: 0 3%;
+    }
+
+    /* LOGO */
+    header>div:nth-of-type(1)>svg:nth-child(1) {
+        order: 1;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    /* Menú de navegación */
+
+    header>div:nth-of-type(1)>nav {
+        display: flex;
+        align-items: center;
+        order: 2;
+    }
+
+    header>div:nth-of-type(1)>nav>label {
+        display: none;
+    }
+
+    header>div:nth-of-type(1)>nav>ul {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin: 0;
+    }
+
+    header>div:nth-of-type(1)>nav>ul>li {
+        padding: 0;
+    }
+
+    header>div:nth-of-type(1)>nav>ul>li>a {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        white-space: nowrap;
+    }
+
+    /* buscador */
+    header>div:nth-of-type(1)>div#buscador {
+        order: 3;
+        background-color: #ebedef;
+        height: 2.5rem;
+        padding: 0 0.5rem;
+    }
+
+    header>div:nth-of-type(1)>div#buscador>input {
+        display: block;
+        width: 7rem;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 12px;
+    }
+
+    /* Iconos */
+    header>div:nth-of-type(1)>svg#usuario {
+        order: 4;
+    }
+
+    header>div:nth-of-type(1)>svg#corazon {
+        order: 5;
+    }
+
+    header>div:nth-of-type(1)>svg#carro {
+        order: 6;
+    }
+
+    /* Aviso promocional */
+    header>div:nth-of-type(2) {
+        height: 2.7rem;
+        padding: 0 3rem;
+    }
+
+    header>div:nth-of-type(2)>p {
+        font-size: 12px;
+        margin: 0;
+    }
+
+}

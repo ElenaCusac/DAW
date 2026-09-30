@@ -1,0 +1,93 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+header,
+footer {
+    background-color: #e6e7e8;
+    border: 2px solid #3f3f3f;
+    border-radius: 5px;
+
+}
+
+footer {
+    color: #3f3f3f;
+    height: 2rem;
+}
+
+header img#logo {
+    width: 5rem;
+    height: 4.35rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+    color: #00acdd;
+}
+
+header h1 {
+    color: #004166;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #00acdd;
+
+}
+
+a:visited {
+    color: #ea2126;
+}
+
+a:hover {
+    color: #f58a1e;
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav#main-menu {
+    background-color: #004166;
+    font-weight: bold;
+    border: 2px solid #e6e7e8;
+}
+
+main section {
+    border: 2px solid #004166;
+    border-radius: 5px;
+}
+
+main section h2 {
+    text-align: center;
+}
+
+main section .news-art {
+    border: 2px solid #e6e7e8;
+    border-radius: 10px;
+    width: 50%;
+}
+
+main section article img {
+    width: 30%;
+    height: auto;
+}
+
+main section article p {
+    width: 70%;
+    height: auto;
+    text-align: justify;
+}
+
+main section article:first-of-type {
+    background-color: #e6e7e8;
+    border-color: #f58a1e;
+}

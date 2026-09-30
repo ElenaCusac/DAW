@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+
+    <p id="listaMujeres"></p>
+
+    <script>
+        const mujeres = [
+            {
+                nombre: "Gala Placidia",
+                esposo: "Ataúlfo",
+                nota: "Princesa romana (hija de Teodosio I).Su boda en 414 simbolizó la primera gran alianza entre visigodos y el Imperio Romano."
+            },
+            {
+                nombre: "Gosvinta",
+                esposo: "Atanagildo y Leovigildo",
+                nota: "Reina consorte por doble matrimonio y figura clave de la política del siglo VI; ferviente defensora del arrianismo."
+            },
+            {
+                nombre: "Baddo",
+                esposo: "Recaredo I",
+                nota: "Única reina visigoda cuya firma consta oficialmente en las actas de un concilio(III Concilio de Toledo, 589)."
+            },
+            {
+                nombre: "Clotilde",
+                esposo: "Amalarico",
+                nota: "Princesa franca católica cuyo conflictivo matrimonio arriano provocó la intervención militar de su hermano Childeberto I."
+            },
+            {
+                nombre: "Egilona",
+                esposo: "Rodrigo",
+                nota: "Última reina visigoda de Toledo. Tras la caída del reino en 711, se casó con Abd al- Aziz, gobernador musulmán."
+            }];
+
+
+        const reyesGodos = [
+            {
+                nombre: "Ataúlfo",
+                periodo: "410–415",
+                esposa: "Gala Placidia",
+                nota: "Estableció los primeros asentamientos visigodos en la Galia e Hispania."
+            },
+            {
+                nombre: "Amalarico",
+                periodo: "526–531",
+                esposa: "Clotilde",
+                nota: "Último rey de la dinastía baltha; buscó la paz con los francos mediante su matrimonio."
+            },
+            {
+                nombre: "Atanagildo",
+                periodo: "555–567",
+                esposa: "Gosvinta",
+                nota: "Estableció la capital permanente del reino visigodo en Toledo."
+            },
+            {
+                nombre: "Leovigildo",
+                periodo: "568–586",
+                esposa: "Gosvinta",
+                nota: "Gran unificador territorial de Hispania y legislador clave."
+            },
+            {
+                nombre: "Recaredo I",
+                periodo: "586–601",
+                esposa: "Baddo",
+                nota: "Unificó religiosamente el reino al convertirse del arrianismo al catolicismo (589)."
+            },
+            {
+                nombre: "Rodrigo",
+                periodo: "710–711",
+                esposa: "Egilona",
+                nota: "Último rey visigodo en Toledo, derrotado en la batalla de Guadalete."
+            },
+            {
+                nombre: "Evarico",
+                periodo: "466–484",
+                esposa: null,
+                nota: "Promulgó el Código de Eurico y consolidó la independencia del reino de Tolosa."
+            },
+            {
+                nombre: "Sisebuto",
+                periodo: "612–621",
+                esposa: null,
+                nota: "Rey erudito; mandó construir una flota militar e impulsó las artes y la ciencia."
+            },
+            {
+                nombre: "Recesvinto",
+                periodo: "649–672",
+                esposa: null,
+                nota: "Promulgó el Liber Iudiciorum (654), el código legal común para todo el reino."
+            },
+
+            {
+                nombre: "Wamba",
+                periodo: "672–680",
+                esposa: null,
+                nota: "Conocido por sus reformas militares y la pacificación de las provincias rebeldes."
+            }];
+
+        let textoMujer = "";
+        let textoGodo = "";
+
+        function mostrarMensaje() {
+            let lista = document.createElement("ul");
+
+            mujeres.forEach((mujer) => {
+                let maridos = reyesGodos.filter((rey) => rey.esposa === mujer.nombre);
+
+                if (maridos.length > 0) {
+                    let listaMujer = document.createElement("li");
+
+                    listaMujer.textContent = mujer.nombre + ": " + mujer.nota;
+
+                    let listaMaridos = document.createElement("ul");
+
+                    maridos.forEach((rey) => {
+                        let listaGodo = document.createElement("li");
+                        listaGodo.textContent = rey.nombre + ": " + rey.nota;
+                        listaMaridos.appendChild(listaGodo);
+
+                    });
+
+                    listaMujer.appendChild(listaMaridos);
+                    lista.appendChild(listaMujer);
+                }
+            });
+
+            return lista;
+        }
+
+        let lista = mostrarMensaje();
+        document.getElementById("listaMujeres").appendChild(lista);
+
+    </script>
+
+</body>
+
+</html>
