@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+div#wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+div > header {
+    background-color: tomato;
+}
+
+div > footer {
+    background-color: lightgreen;
+}
+
+div > article {
+    text-align: left;
+    background-color: deepskyblue;
+}
+
+div > .aside-1 {
+    background-color: gold;
+}
+
+div > .aside-2 {
+    background-color: hotpink;
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
