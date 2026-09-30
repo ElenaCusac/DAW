@@ -5,6 +5,7 @@ const USUARIO_BD = "jose";
 const CLAVE_BD = "josefa";
 const NOMBRE_BD = "bd_cv";
 
+<<<<<<< HEAD
 try {
     @$conection=mysqli_connect(SERVIDOR_BD, USUARIO_BD, CLAVE_BD, NOMBRE_BD);
     mysqli_set_charset($conection, "utf8");
@@ -23,4 +24,23 @@ try {
 }
 
 
+=======
+function error_page($title, $body) {
+    return '<!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>'.$title.'</title>
+            </head>
+
+            <body>
+                '.$body.'
+            </body>
+
+            </html>';
+}
+
+>>>>>>> cf119f7 (Renombrar carpeta de PHP para compatibilidad con Windows)
 ?>
