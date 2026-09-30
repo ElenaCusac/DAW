@@ -1,0 +1,6 @@
+Crea una función que reciba una hora y minuto específicos (ejemplo: 18 y 30). 
+El script debe comprobar cada segundo la hora actual y, cuando coincida 
+exactamente con la hora programada, mostrar la alerta "¡Es hora de la reunión!" 
+y detener la comprobación.
+
+Pistas: getHours(), getMinutes(), setInterval(), setTimeout()

@@ -1,6 +1,10 @@
-Escribe una función flecha que reciba el tema visual preferido de un usuario ("dark" o "light") y lo guarde en localStorage. Crea otra función flecha que recupere ese valor y devuelva un mensaje de bienvenida personalizado según el tema.
+Escribe una funciÃ³n flecha que reciba el tema visual preferido 
+de un usuario ("dark" o "light") y lo guarde en localStorage. 
+Crea otra funciÃ³n flecha que recupere ese valor y devuelva un 
+mensaje de bienvenida personalizado segÃºn el tema.
 
 
-Tu aplicación tiene que tener 2 botones (guardar y recuperar) y también un desplegable con los tipos de temas visuales.
+Tu aplicaciÃ³n tiene que tener 2 botones (guardar y recuperar) 
+y tambiÃ©n un desplegable con los tipos de temas visuales.
 
 Pistas: localStorage 

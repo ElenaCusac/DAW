@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reyes Godos</title>
+</head>
+
+<body>
+
+    <h1>Lista con los Reyes Godos con más de 3 votos</h1>
+
+    <ul id="listaGodos"></ul>
+
+
+    <script>
+        const GODOS = ["Ataulfo", "Teudiselo", "Sisenado", "Sigérico", "Valia", "Valia", "Valia", "Valia", "Valia",
+            "Valia", "Teudiselo", "Sisenado", "Teodórico", "Turismundo", "Éurico", "Alárico", "Gesalérico", "Amalárico",
+            "Teudis", "Teudiselo", "Sisenado", "Quintilla", "Ágila", "Atanagildo", "Liuva", "Leovigildo", "Recaredo",
+            "Vitérico", "Sisebuto", "Suintila", "Sisenado", "Quintilla", "Chindasvinto", "Recesvinto", "Recaredo",
+            "Ervigio", "Égica", "Vitiza", "Rodrigo"];
+
+        let repetidos = GODOS.filter((rey) => {
+            let contador = 0;
+
+            GODOS.filter((godo) => {
+                if (rey === godo) {
+                    contador++;
+                }
+            })
+
+            if (contador >= 3) {
+                return rey;
+            }
+        });
+
+        let array = [];
+
+        let unicosRepetidos = repetidos.filter((rey) => {
+            if (array.includes(rey)) {
+                return false;
+            } else {
+                array.push(rey);
+                return true;
+            }
+        });
+
+        for (let i = 0; i < unicosRepetidos.length; i++) {
+            // Crear un nodo como un elemento de una lista
+            let nodo = document.createElement("li");
+
+            // Contenido del nodo
+            nodo.textContent = unicosRepetidos[i];
+
+            // Eliminar el nodo al pulsar
+            nodo.onclick = () => nodo.remove();
+
+            // Enlazarlo con la <ul>
+            document.getElementById("listaGodos").appendChild(nodo);
+
+        }
+
+    </script>
+</body>
+
+</html>

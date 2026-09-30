@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarma Programada</title>
+</head>
+
+<body>
+
+    <p id="mensaje"></p>
+
+    <script>
+        function programarReunion(hora, minuto) {
+            const intervalo = setInterval(() => {
+                const ahora = new Date();
+
+                const horaActual = ahora.getHours();
+                const minutoActual = ahora.getMinutes();
+
+                if (horaActual === hora && minutoActual === minuto) {
+                    alert("¡Es hora de la reunión!");
+                    clearInterval(intervalo);
+                }
+            }, 1000);
+        }
+
+        programarReunion(12, 0);
+
+
+    </script>
+
+</body>
+
+</html>

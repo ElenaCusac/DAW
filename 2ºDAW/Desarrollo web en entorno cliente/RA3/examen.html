@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RubikTimer - Registro de tiempos</title>
+</head>
+
+<body>
+    <h1>RubikTimer - Registro de tiempos</h1>
+    <div>
+        <label for="playerName">Jugador:</label>
+        <input type="text" id="playerName" value="Federico" placeholder="Nombre jugador...">
+    </div>
+    <div>
+        <span id="displayMinutes">00</span>
+        <span>:</span>
+        <span id="displaySeconds">00</span>
+        <span>.</span>
+        <span id="displayMillis">00</span>
+    </div>
+    <div>
+        <button id="btnStartPause" onclick="startPause()"> <span id="lblStartPause">Iniciar</span> </button>
+        <button id="btnSaveTime" onclick="guardar()" disabled> <span>Guardar Tiempo</span> </button>
+        <button id="btnReset" onclick="reiniciar()" disabled> <span>Reiniciar</span> </button>
+    </div>
+    <h1>Tabla de Tiempos</h1>
+    <p id="tiempos"></p>
+
+    <script>
+        // Tiempo
+        const displayMinutes = document.getElementById('displayMinutes');
+        const displaySeconds = document.getElementById('displaySeconds');
+        const displayMillis = document.getElementById('displayMillis');
+
+        // Botones
+        const btnStartPause = document.getElementById("btnStartPause");
+        const btnSaveTime = document.getElementById("btnSaveTime");
+        const btnReset = document.getElementById("btnReset");
+
+        // Campos de texto
+        const playerNameInput = document.getElementById("playerName");
+        const lblStartPause = document.getElementById("lblStartPause");
+
+        const pad = (valor) => {return String(valor).padStart(2, '0')};
+
+        let timerInterval = null;
+        let elapsedTime = 0;
+        let isRunning = false;
+
+        const mostrarTiempo = () => {
+            let min = 0; secs = 0; decimas = 0;
+        }
+
+        // Función para el cronómetro
+        const contar = () => {
+            elapsedTime++;
+            mostrarTiempo();
+        }
+
+        // Función para el botón Iniciar
+        const startPause = () => {
+            timerInterval = setInterval(contar, 10)
+
+            btnSaveTime.disabled = false;
+            btnReset.disabled = false;
+        }
+
+        // Función para el botón guardar
+        const guardar = () => {
+            
+        }
+
+        // Función para el botón Reiniciar
+        const reiniciar = () => {
+            clearInterval(timerInterval);
+        }
+        
+    </script>
+</body>
+
+</html>
