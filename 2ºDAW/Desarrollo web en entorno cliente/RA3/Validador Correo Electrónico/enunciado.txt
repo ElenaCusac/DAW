@@ -1,0 +1,7 @@
+Diseña una función flecha que reciba una dirección de correo electrónico 
+y verifique si es válida comprobando que:
+
+- Contenga exactamente un símbolo @.
+- Termine en .com o .es.
+- No tenga espacios en blanco. 
+- Devuelve true si cumple las condiciones o false si no.

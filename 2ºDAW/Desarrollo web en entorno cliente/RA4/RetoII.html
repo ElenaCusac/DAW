@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Retos JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Retos JavaScript</h1>
+
+    <p id="listaCoches">Lista de coches con los dos arrays: </p>
+
+    <p id="cochesCarrakos">Coches de carrakos que no estén en cars: </p>
+
+    <p id="buddiesHonda">Nombre y apellidos de los buddies que usan un Honda: </p>
+
+    <p id="marcasBuddies">Marcas utilizadas por los buddies: </p>
+
+    <p id="marcasNoBuddies">Marcas no utilizadas por los buddies:</p>
+
+    <p id="cantidadBuddies">Cuántas marcas han sido utilizadas por buddies:</p>
+
+    <p id="cantidadNoBuddies">Cuántas marcas no han sido utilizadas por buddies: </p>
+
+
+    <script>
+
+        var cars = ["Saab", "Volvo", "BMW",["Honda", "Toyota",["Lexus", "Mercedes", "Lada"], "Hyunday"]];
+        var carrakos = ["Chevrolet", "Tesla", "BMW",["Honda", "Infiniti",["Lexus", "Mercedes", "Kia"], "Hyunday"],["Mazda", "Mercedes", "Jeep",["KTM", "Nissan", "Isuzu"]]];
+        var buddies = [{firstName:"Chuck", lastName:"Norris", car:"Honda"},{firstName:"Yakie", lastName:"Chang", car:"BMV"},{firstName:"Bruce", lastName:"Lee", car:"Honda"},{firstName:"Steven", lastName:"Seagal", car:"Lada"}];
+
+        // Recorrer arrays anidados
+        function recorrerArray(array, resultado) {
+            array.filter(function(elemento) {
+                if (Array.isArray(elemento)) {
+                    recorrerArray(elemento, resultado);
+
+                } else {
+                    resultado.push(elemento);
+
+                }
+            });
+
+        }
+
+
+        var carsRecorridos = [];
+        var carrakosRecorridos = [];
+
+        recorrerArray(cars, carsRecorridos);
+        recorrerArray(carrakos, carrakosRecorridos);
+
+
+        // - Lista únicade coches com los dos arrays
+        var listaUnica = [];
+
+        carsRecorridos.filter(function(coche) {
+            var encontrado = listaUnica.find(function(elemento) {
+                return elemento === coche;
+
+            });
+
+            if (!encontrado) {
+                listaUnica.push(coche);
+
+            }
+        });
+
+        carrakosRecorridos.filter(function(coche) {
+            var encontrado = listaUnica.find(function(elemento) {
+                return elemento === coche;
+
+            });
+
+            if (!encontrado) {
+                listaUnica.push(coche);
+
+            }
+        });
+
+
+        document.getElementById("listaCoches").innerHTML =
+            "Lista de coches con los dos arrays: " +
+            listaUnica.join(", ");
+
+
+        // - Coches de Carrakos que no están en cars
+        var cochesCarrakos = [];
+
+
+        carrakosRecorridos.filter(function(coche) {
+            var encontrado = carsRecorridos.find(function(elemento) {
+                return elemento === coche;
+
+            });
+
+            if (!encontrado) {
+                var repetido = cochesCarrakos.find(function(elemento) {
+                    return elemento === coche;
+
+                });
+
+                if (!repetido) {
+                    cochesCarrakos.push(coche);
+
+                }
+            }
+        });
+
+
+        document.getElementById("cochesCarrakos").innerHTML = "Coches de carrakos que no estén en cars: " + cochesCarrakos.join(", ");
+
+
+        // - Nombre y apellidos de los buddies que usan un Honda
+        var buddiesHonda = buddies.filter(function(buddy) {
+            return buddy.car === "Honda";
+
+        });
+
+        var nombresHonda = buddiesHonda.map(function(buddy) {
+            return buddy.firstName + " " + buddy.lastName;
+
+        });
+
+        document.getElementById("buddiesHonda").innerHTML = "Nombre y apellidos de los buddies que usan un Honda: " + nombresHonda.join(", ");
+
+        // - Marcas utilizadas por los buddies
+        var marcasBuddies = [];
+
+        buddies.filter(function(buddy) {
+            var encontrado = marcasBuddies.find(function(marca) {
+                return marca === buddy.car;
+
+            });
+
+            if (!encontrado) {
+                marcasBuddies.push(buddy.car);
+
+            }
+        });
+
+        document.getElementById("marcasBuddies").innerHTML = "Marcas utilizadas por los buddies: " + marcasBuddies.join(", ");
+
+        // - Marcas no utilizadas por los buddies.
+        var marcasNoBuddies = listaUnica.filter(function(marca) {
+            var encontrada = marcasBuddies.find(function(marcaBuddy) {
+                return marcaBuddy === marca;
+
+            });
+
+            return !encontrada;
+
+        });
+
+        document.getElementById("marcasNoBuddies").innerHTML = "Marcas no utilizadas por los buddies: " + marcasNoBuddies.join(", ");
+
+        // - Cuántas marcas han sido utilizadas
+        document.getElementById("cantidadBuddies").innerHTML = "Cuántas marcas han sido utilizadas por buddies: " + marcasBuddies.length;
+
+        // - Cuántas marcas no han sido utilizadas
+        document.getElementById("cantidadNoBuddies").innerHTML = "Cuántas marcas no han sido utilizadas por buddies: " + marcasNoBuddies.length;
+
+    </script>
+
+</body>
+
+</html>
