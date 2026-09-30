@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REYES GODOS. BUSCAMAN</title>
+</head>
+
+<body>
+    <script>
+        // Realiza una función flecha que dado el nombre de un vikingo diga si fue un rey o no.
+        var vikings = '{"vikingos":[{"reino":"Noruega","reyes":["Hakon","Harald",["Ivar",["Olaf","Lars","Lasse"],"Bjorn"],"Ragnar"]},{"reino":"Dinamarca","reyes":["Frodo","Hamming",["Angantyr","Sarunas"],"Horik"]}]}';
+        
+        // Convertimos el JSON en un objeto JavaScript
+        var objeto = JSON.parse(vikings);
+
+        // Creamos una función flecha para comprobar si fue rey
+        var buscarRey = (nombre) => {
+            var encontrado = false;
+
+            // Recorremos el array de vikingos
+            objeto.vikingos.forEach((vikingo) => {
+
+                // Comprobamos si el nombre está entre sus reyes
+                if (vikingo.reyes.includes(nombre)) {
+                    encontrado = true;
+                }
+
+            });
+
+            if (encontrado) {
+                console.log(nombre + " fue rey");
+            } else {
+                console.log(nombre + " no fue rey");
+            }
+        };
+
+        // Probamos la función
+        buscarRey("Ragnar");
+        buscarRey("Frodo");
+        buscarRey("Thor");
+
+    </script>
+</body>
+
+</html>

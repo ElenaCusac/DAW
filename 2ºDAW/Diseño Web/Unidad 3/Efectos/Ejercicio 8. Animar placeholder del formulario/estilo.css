@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CABECERA */
+header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+header>picture#logo-cabecera {
+    flex: 75%;
+}
+
+header>picture#logo-cabecera>img {
+    width: 10rem;
+    height: auto;
+}
+
+header>nav#bloque-iconos>ul {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 25%;
+}
+
+header>nav#bloque-iconos ul>li {
+    flex-basis: 10%;
+    padding: 0.5rem;
+}
+
+header>nav#bloque-iconos ul>li>a {
+    color: black;
+    font-size: 2rem;
+}
+
+nav#menu-principal {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+nav#menu-principal div#hamburguesa {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Menu flexible*/
+ul#menu {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+}
+
+nav#menu-principal:hover>ul#menu {
+    display: flex;
+}
+
+ul#menu>li {
+    border-bottom: 1px white solid;
+    margin: 0.5rem 0;
+}
+
+ul>li>a {
+    color: white;
+}
+
+/* El submenu */
+.submenu {
+    display: none;
+    background-color: black;
+}
+
+/* Mostrar el submenu al pasar por el ulmenu */
+#menu>li:hover>.submenu {
+    display: flex;
+}
+
+/*MAIN*/
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div {
+    width: 100%;
+    height: 50px;
+    /*El elemento padre tiene una posición relativa*/
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+div input {
+    width: 18rem;
+    height: 100%;
+    background: none;
+    padding-top: 1.2rem;
+    outline: none;
+    color: black;
+    border: 0;
+}
+
+div label.lbl {
+    /*La etiqueta tiene una posición absoluta*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /*El elemento no recibe eventos de puntero; las acciones pasan al elemento que está detrás (input).*/
+    border-bottom: 1px solid #c7c7c7;
+}
+
+/*Texto del label que se va a mover al escribir en el input*/
+.texto {
+    /*Este elemento va a tener también una posición absoluta */
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    /* Sobre este elemento se hará al transición */
+    transform: transition 0.3s;
+}
+
+/* Cuando el imput coja el foco o cuando el placeholder del input no esté visible*/
+main form#contacto div input:focus,
+main form#contacto div input:not(:placeholder-shown) {
+    /* Tranladamos el elemento en el eje Y */
+    transform: translateY(2rem);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.boton {
+    width: 100%;
+    height: 2.2rem;
+    margin-top: 2.5rem;
+    color: white;
+    background: black;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 1.1rem;
+    /* El efecto de escalado se tiene que realiza con un efecto de transición */
+    /**/
+}
+
+/*Al posicionar el ratón sobre el botón de envío de escala un poquito (1.0.5)*/
+/**/
+
+
+
+/*PIE DE PÁGINA*/
+footer nav#menu-adicional {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 1rem;
+}
+
+footer nav#menu-adicional ul li {
+    margin: 0.2rem 0;
+}
+
+footer nav#menu-adicional ul li a {
+    color: white;
+    font-size: smaller;
+}

@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+div#content header#head-asos {
+    display: flex;
+    align-items: center;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 0.3rem;
+}
+
+div#content header#head-asos nav#icons {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+div#content header#head-asos div.input-group,
+div#content header#head-asos nav#main-menu input#menu-icon {
+    display: none;
+}
+
+div#content header#head-asos nav#main-menu input#menu-icon:checked+ul#menu {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    padding-left: 1rem;
+}
+
+header#head-asos>nav#main-menu>label {
+    width: 4rem;
+    height: 3.5rem;
+    display: block;
+    cursor: pointer;
+}
+
+header#head-asos>nav#main-menu>label>span.line-menu {
+    position: absolute;
+    top: 1.9rem;
+    left: 1rem;
+    width: 1.9rem;
+    height: .2rem;
+    background: white;
+}
+
+header#head-asos>nav#main-menu>label>span.line-menu:nth-child(1) {
+    top: 1.25rem;
+}
+
+header#head-asos>nav#main-menu>label>span.line-menu:nth-child(3) {
+    top: 2.5rem;
+}
+
+header#head-asos>nav#main-menu>ul#menu {
+    position: absolute;
+    left: -60vw;
+    top: 45px;
+    background-color: #2d2d2d;
+    z-index: 100;
+    width: 60vw;
+    height: 100vh;
+    padding: 2rem;
+}
+
+@media all and (min-width: 1024px) {
+
+    /* Ocultamos la hamburguesa */
+
+    /*El logo tiene que aparecer en primer lugar*/
+
+    /*El menú principal crece 3 veces más que el resto de items de la cabecera*/
+
+    /* Mostramos las opciones del menú */
+
+    /* Los artículos se muestran 4 en cada fila */
+
+}

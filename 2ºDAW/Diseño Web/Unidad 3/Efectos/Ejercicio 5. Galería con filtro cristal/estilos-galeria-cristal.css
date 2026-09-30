@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  font-family: system-ui, sans-serif;
+}
+
+.escena {
+  position: relative;
+  width: 600px;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 1. Filtro aplicado directamente a la imagen */
+.imagen-fondo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /*Aplicamos un filtro con un 80% en escala de grises y un 70% de brillo */
+  filter: grayscale(80%) brightness(70%);
+
+  /*El filtro se aplica con un efecto de transición de 0.5 segundos. La transformación también */
+  transition: 0.5s;
+}
+
+/* Al pasar el ratón por la escena, quitamos el filtro de la imagen */
+.escena:hover .imagen-fondo {
+  /* Valor 0% para la escala de grises y 100% para el brillo*/
+  filter: grayscale(0%) brightness(100%);
+
+  /*Se escala el elemento 1.05*/
+  transform: scale(1.05);
+}
+
+/* 2. Filtro aplicado al fondo detrás de la tarjeta (Cristal) */
+.panel-cristal {
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  padding: 25px 30px;
+  color: white;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+
+  /*El fondo de detrás tienen un filtro de desenfoque de 10px*/
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+
+  /** Transición del color de fondo de 0.4segundos*/
+  transition: 0.4;
+}
+
+.escena:hover .panel-cristal {
+  /* Color de fondo de color negro con opacidad 0.35*/
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.panel-cristal h2 {
+  margin-top: 0;
+}

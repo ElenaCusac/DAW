@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <p id="godos"></p>
+    <script>
+        /* Se pide que transformes el array JSON que se muestra en la primera columna en un listado
+        HTML como el que se muestra en la segunda columna teniendo en cuenta que los godos
+        proscritos no deben aparecer: */
+
+        const GODOS = [
+            "Atanarico",
+            "Alarico I",
+            "Ataúlfo",
+            "Sigerico",
+            "Walia",
+            "Teodorico I",
+            "Turismundo",
+            "Teodorico II",
+            "Evarico", [
+                "Alarico II",
+                "Gesaleico",
+                "Teodorico el Grande",
+                "Amalarico",
+                "Teudis"],
+            "Teudiselo",
+            "Agila I",
+            "Atanagildo",
+            "Liuva I",
+            "Leovigildo",
+            "Recaredo I",
+            "Liuva II",
+            "Witerico",
+            "Gundemaro",
+            "Sisebuto",
+            "Recaredo II",
+            "Suintila",
+            "Sisenando",
+            "Chintila",
+            ["Tulga",
+                "Chindasvinto",
+                "Recesvinto",
+                "Wamba",
+                "Ervigio"],
+            "Egica",
+            "Witiza",
+            "Rodrigo",
+            "Agila II",
+            "Ardo"
+        ]
+        const PROSCRITOS = [
+            "Teodorico el Grande",
+            "Amalarico",
+            "Agila I",
+            "Atanagildo",
+            "Liuva I"
+        ]
+
+        function mostrarArray(array) {
+            let lista = document.createElement("ul");
+
+            array.map((elemento) => {
+                if (!PROSCRITOS.find((rey) => rey === elemento)) {
+                    if (Array.isArray(elemento)) {
+                        let elementoLista = document.createElement("li");
+                        elementoLista.appendChild(mostrarArray(elemento));
+                        lista.appendChild(elementoLista);
+                    } else {
+                        let elementoLista = document.createElement("li");
+                        elementoLista.textContent = elemento.toString();
+                        lista.appendChild(elementoLista);
+                    }
+                }
+            })
+
+            return lista;
+        }
+
+        let lista = mostrarArray(GODOS);
+        document.getElementById("godos").appendChild(lista);
+    </script>
+</body>
+
+</html>

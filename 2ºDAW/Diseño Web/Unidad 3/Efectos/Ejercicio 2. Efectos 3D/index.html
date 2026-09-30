@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creamos una tarjeta giratoria</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .marco {
+            width: 13rem;
+            height: 13rem;
+            /* Activa el efecto 3D siempre en el contenedor padre*/
+            perspective: 700px;
+        }
+
+        .tarjeta {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.5s;
+            /* La tranformación se realiza de forma suave en medio segundo. */
+            transform-style: preserve-3d;
+            /* Permite tener dos caras en 3D */
+        }
+
+        .cara {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.3rem;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid lightgray;
+            padding: 4.6rem;
+            position: absolute;
+            /* Las pone una encima de otra */
+            backface-visibility: hidden;
+            /* Oculta cada cara cuando mira hacia atrás */
+        }
+
+        .frente {
+            background-color: lightblue;
+        }
+
+        .atras {
+            background-color: lightcoral;
+            /* Giramos/rotamos esta cara 180 grados en el eje Y para que mire hacia atrás */
+            transform: rotateY(180deg);
+        }
+
+        .marco:hover .tarjeta {
+            /* No ponemos directamente .tarjeta:hover porque sale un efecto de rebote desagradable */
+            /* Giramos/rotamos 180 grados en el eje Y para que se muestre la otra cara al hacer hover sobre el marco */
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marco">
+        <div class="tarjeta">
+            <div class="cara frente">FRENTE</div>
+            <div class="cara atras">ATRÁS</div>
+        </div>
+    </div>
+</body>
+
+</html>

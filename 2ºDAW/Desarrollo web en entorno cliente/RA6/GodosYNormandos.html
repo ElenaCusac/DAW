@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godos y Normandos</title>
+</head>
+
+<body>
+    <h1 id="tituloGodos"></h1>
+    <p id="tropasGodos"></p>
+
+    <h1 id="tituloNormandos"></h1>
+    <p id="tropasNormandos"></p>
+
+    <script>
+        let botonesGodos = [{ nombre: "Raknar", tropas: 1200 }, { nombre: "Lars", tropas: 1200 }];
+        let botonesNormandos = [{ nombre: "Suricato", tropas: 1000 }];
+
+        let tropasTotalesGodos = 0;
+        let tropasTotalesNormandos = 0;
+
+        let tituloGodos = document.getElementById("tituloGodos");
+        let tituloNormandos = document.getElementById("tituloNormandos");
+
+        let tropasGodos = document.getElementById("tropasGodos");
+        let tropasNormandos = document.getElementById("tropasNormandos");
+
+
+        function modificarTitulos() {
+            tropasTotalesGodos = botonesGodos.reduce((acumulador, godo) => {
+                return acumulador + godo.tropas;
+            }, 0);
+            tituloGodos.textContent = "GODOS - " + tropasTotalesGodos;
+
+            tropasTotalesNormandos = botonesNormandos.reduce((acumulador, normando) => {
+                return acumulador + normando.tropas;
+            }, 0);
+            tituloNormandos.textContent = "NORMANDOS - " + tropasTotalesNormandos;
+        }
+
+
+        function crearBotones() {
+            tropasGodos.innerHTML = "";
+            tropasNormandos.innerHTML = "";
+
+            botonesGodos.forEach((godo) => {
+                let boton = document.createElement("button");
+                boton.textContent = godo.nombre + " - " + godo.tropas;
+
+                boton.addEventListener("click", () => {
+                    cambiarTropas(godo, botonesGodos, botonesNormandos);
+                });
+
+                tropasGodos.appendChild(boton);
+            });
+
+
+            botonesNormandos.forEach((normando) => {
+                let boton = document.createElement("button");
+                boton.textContent = normando.nombre + " - " + normando.tropas;
+
+                boton.addEventListener("click", () => {
+                    cambiarTropas(normando, botonesNormandos, botonesGodos);
+                });
+
+                tropasNormandos.appendChild(boton);
+            });
+        }
+
+
+        function cambiarTropas(personaje, arrayOrigen, arrayDestino) {
+            // Buscamos la posición del personaje en el array de origen
+            let posicion = arrayOrigen.indexOf(personaje);
+
+            // Eliminamos el personaje del array de origen
+            let eliminado = arrayOrigen.splice(posicion, 1);
+
+            // Introducimos el personaje en el otro array
+            arrayDestino.push(eliminado[0]);
+
+            // Actualizamos los botones y los títulos
+            crearBotones();
+            modificarTitulos();
+        }
+
+        crearBotones();
+        modificarTitulos();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+label#hamburger {
+    position: relative;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    background: #ff9700;
+}
+
+label#hamburger>input#flag {
+    display: none;
+}
+
+label#hamburger>span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 3em;
+    height: .4em;
+    margin: auto;
+    background: #fff;
+    transition: 0.3s;
+}
+
+label#hamburger>span:before,
+label#hamburger>span:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    content: '';
+    background: #fff;
+    transition: 0.5s linear;
+}
+
+label#hamburger>span:before {
+    top: -1rem;
+}
+
+label#hamburger>span:after {
+    bottom: -1rem;
+}
+
+label#hamburger>input#flag:checked+span:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+label#hamburger>input#flag:checked+span:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+label#hamburger>input#flag:checked+span {
+    background: none;
+}

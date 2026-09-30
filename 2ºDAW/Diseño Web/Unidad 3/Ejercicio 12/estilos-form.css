@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 0.9rem;
+    color: black;
+    background-color: white;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0 0.9rem;
+}
+
+header div#cabecera {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header div#cabecera picture#logo-cabecera {
+    display: flex;
+    align-items: center;
+    height: 3.9rem;
+}
+
+header div#cabecera picture#logo-cabecera img {
+    width: 7.5rem;
+    height: auto;
+}
+
+header div#cabecera nav#bloque-iconos ul {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin: 0;
+}
+
+header div#cabecera nav#bloque-iconos ul li a {
+    font-size: 1.9rem;
+    color: black;
+}
+
+header nav#menu-principal {
+    display: flex;
+    position: relative;
+    order: 3;
+    width: 100%;
+    height: 3rem;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav#menu-principal div#hamburguesa {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    height: 100%;
+}
+
+header nav#menu-principal ul#menu {
+    display: none;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 0.6rem 1.25rem;
+    margin: 0;
+    z-index: 10;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+header nav#menu-principal:hover ul#menu {
+    display: flex;
+    flex-flow: column;
+}
+
+header nav#menu-principal ul#menu > li {
+    display: block;
+    padding: 0.9rem 0.3rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+header nav#menu-principal ul#menu > li > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+header nav#menu-principal ul#menu li ul.submenu {
+    display: none;
+}
+
+header nav#menu-principal ul#menu li span.mas {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1.6rem 0.9rem;
+}
+
+main section#form-contacto {
+    width: 12.5rem;
+}
+
+main section#form-contacto h2 {
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 0 0.3rem;
+}
+
+main section#form-contacto form#contacto {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+main section#form-contacto form#contacto label {
+    display: none;
+}
+
+main section#form-contacto form#contacto input[type="text"],
+main section#form-contacto form#contacto select,
+main section#form-contacto form#contacto textarea {
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 0.2rem;
+    background-color: white;
+    color: #999;
+    margin-bottom: 0.6rem;
+}
+
+main section form#contacto input[type="text"],
+main section form#contacto select {
+    height: 1.7rem;
+}
+
+main section#form-contacto form#contacto input::placeholder,
+main section#form-contacto form#contacto textarea::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+main section#form-contacto form#contacto select {
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+main section#form-contacto form#contacto textarea {
+    height: 10rem;
+    margin-bottom: 0.6rem;
+}
+
+main section#form-contacto form#contacto input[type="text"]:focus,
+main section#form-contacto form#contacto select:focus,
+main section#form-contacto form#contacto textarea:focus {
+    background-color: #9b9b9b;
+    color: white;
+    border: 0.1rem solid #888;
+    outline: #9b9b9b;
+}
+
+main section#form-contacto form#contacto input:focus::placeholder,
+main section#form-contacto form#contacto textarea:focus::placeholder {
+    color: white;
+}
+
+#caracteres {
+    font-size: 0.75rem;
+    color: #777;
+    margin: -0.3rem 0 0.3rem;
+}
+
+main section form#contacto input[type="button"] {
+    width: 100%;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+main section form#contacto input[type="button"]:hover {
+    background-color: #333;
+}
+
+@media screen and (min-width: 48rem) {
+    header {
+        padding: 0 1.9rem;
+    }
+
+    header div#cabecera picture#logo-cabecera {
+        height: 4.7rem;
+    }
+
+    header div#cabecera picture#logo-cabecera img {
+        width: 8.75rem;
+    }
+    
+    header nav#menu-principal {
+        height: 3rem;
+    }
+
+    header nav#menu-principal div#hamburguesa span:first-child {
+        font-size: 1.5rem;
+    }
+
+    header nav#menu-principal div#hamburguesa span:last-child {
+        font-size: 0.8rem;
+    }
+
+    header nav#menu-principal ul#menu {
+        top: 3rem;
+        padding: 0.9rem 1.9rem;
+    }
+
+    header nav#menu-principal ul#menu > li {
+        padding: 1rem 0.6rem;
+    }
+
+    header nav#menu-principal ul#menu > li > a {
+        font-size: 1rem;
+    }
+
+    main {
+        padding-top: 1.9rem;
+    }
+
+    main section#form-contacto {
+        width: 20rem;
+    }
+
+    main section#form-contacto h2 {
+        font-size: 2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    main section#form-contacto form#contacto input[type="text"],
+    main section#form-contacto form#contacto select {
+        height: 2rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    main section#form-contacto form#contacto textarea {
+        height: 11.2rem;
+        font-size: 0.9rem;
+    }
+
+    main section#form-contacto form#contacto span#caracteres {
+        font-size: 0.8rem;
+    }
+
+    main section#form-contacto form#contacto input[type="button"] {
+        height: 1.9rem;
+        font-size: 0.9rem;
+    }
+}

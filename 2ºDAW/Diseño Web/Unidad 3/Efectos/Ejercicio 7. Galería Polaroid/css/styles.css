@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../Texture-background/99.jpg');
+    background-size: cover;
+}
+
+div.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div.row div.columns {
+    width: 100%;
+}
+
+div.row div.columns ul.polaroids {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    gap: 3rem;
+    margin: 2rem;
+}
+
+div.row div.columns ul.polaroids li {
+    flex-basis: 20rem;
+    max-width: 100%;
+    padding: 1rem 1rem 2.8rem 1rem;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+div.row div.columns ul.polaroids li a::after {
+    content: attr(title);
+    display: block;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+div.row div.columns ul.polaroids li a {
+    text-decoration: none;
+    color: black;
+}
+
+div.row div.columns ul.polaroids li:nth-child(3n) {
+    transform: rotate(3deg);
+}
+
+div.row div.columns ul.polaroids li:nth-child(2n) {
+    transform: rotate(-6deg);
+}
+
+div.row div.columns ul.polaroids li:nth-child(7n +1) {
+    transform: rotate(7deg);
+}
+
+div.row div.columns ul.polaroids li img {
+    max-width: 100%;
+    height: auto;
+}
+
+div.row div.columns ul.polaroids li:hover {
+    transform: scale(1.1, 1.1);
+    transform: skew(0, 0)
+}
