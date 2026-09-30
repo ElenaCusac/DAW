@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas y Actores</title>
+</head>
+
+<body>
+
+    <p id="actorMachete">1. Actor de la película Machete: </p>
+    <p id="actoresMercenarios">2. Actores de la película Mercenarios: </p>
+    <p id="actorInvasionDelta">3. Actor de la película Invasión Delta: </p>
+    <p id="apodoDeltaForce">4. Apodo del actor de la película Delta Force: </p>
+    <p id="actorTerminator">5 Actor de la película Terminator: </p>
+    <p id="peliculasTerminator">6. Películas de Terminator y año: </p>
+
+    <script>
+        const actoresChungosFilmografia = [
+            {
+                nombre: "Chuck Norris",
+                apodo: "El indestructible",
+                estiloPrincipal: "Tang Soo Do / Karate",
+                peliculas: [
+                    "The Wrecking Crew (1968)",
+                    "El Furor del Dragón / Way of the Dragon (1972)",
+                    "Slaughter in San Francisco (1974)",
+                    "Breaker! Breaker! (1977)",
+                    "Los valientes visten de negro / Good Guys Wear Black (1978)",
+                    "Fuerza una / A Force of One (1979)",
+                    "Duelo final / The Octagon (1980)",
+                    "Ojo por ojo / An Eye for an Eye (1981)",
+                    "Furia silenciosa / Silent Rage (1982)",
+                    "Venganza forzada / Forced Vengeance (1982)",
+                    "Lobo solitario McQuade / Lone Wolf McQuade (1983)",
+                    "Desaparecido en acción / Missing in Action (1984)",
+                    "Desaparecido en acción 2 / Missing in Action 2: The Beginning (1985)",
+                    "Código de silencio / Code of Silence (1985)",
+                    "Invasión U.S.A. / Invasion U.S.A. (1985)",
+                    "Delta Force / The Delta Force (1986)",
+                    "El templo del oro / Firewalker (1986)",
+                    "Braddock: Desaparecido en acción III (1988)",
+                    "Héroe y el terror / Hero and the Terror (1988)",
+                    "Delta Force 2 (1990)",
+                    "El asesino / The Hitman (1991)",
+                    "Juntos para vencer / Sidekicks (1992)",
+                    "Hellbound (1994)",
+                    "Top Dog (1995)",
+                    "El guerrero del bosque / Forest Warrior (1996)",
+                    "Logan's War: Bound by Honor (1998)",
+                    "The President's Man (2000)",
+                    "The President's Man: A Line in the Sand (2002)",
+                    "Cuestión de pelotas / Dodgeball (2004) [Cameo]",
+                    "The Cutter (2005)",
+                    "Walker, Texas Ranger: Trial by Fire (2005)",
+                    "Los Mercenarios 2 / The Expendables 2 (2012)",
+                    "Agent Recon (2024)"
+                ]
+            },
+            {
+                nombre: "Bruce Lee",
+                apodo: "El Dragón",
+                estiloPrincipal: "Jeet Kune Do",
+                peliculas: [
+                    "The Golden Gate Girl (1941)",
+                    "The Birth of Mankind (1946)",
+                    "My Son, Ah Chung / The Kid (1950)",
+                    "In the Face of Demolition (1953)",
+                    "An Orphan's Tragedy (1955)",
+                    "The Orphan (1960)",
+                    "Marlowe, detective muy privado (1969)",
+                    "Karloff / The Big Boss (1971)",
+                    "Fist of Fury / De la China con furor (1972)",
+                    "El Furor del Dragón / Way of the Dragon (1972)",
+                    "Operación Dragón / Enter the Dragon (1973)",
+                    "Juego de la muerte / Game of Death (1978) [Póstuma]"
+                ]
+            },
+            {
+                nombre: "Jean-Claude Van Damme",
+                apodo: "Los Músculos de Bruselas",
+                estiloPrincipal: "Shotokan Karate / Kickboxing",
+                peliculas: [
+                    "Rue Barbare (1984)",
+                    "Monaco Forever (1984)",
+                    "Breakdance / Breakin' (1984)",
+                    "Retroceder nunca, rendirse jamás / No Retreat, No Surrender (1986)",
+                    "Contacto Sangriento / Bloodsport (1988)",
+                    "Águila negra / Black Eagle (1988)",
+                    "Cyborg (1989)",
+                    "Kickboxer (1989)",
+                    "Corazón de león / Lionheart (1990)",
+                    "Libertad para morir / Death Warrant (1990)",
+                    "Doble Impacto / Double Impact (1991)",
+                    "Soldado Universal / Universal Soldier (1992)",
+                    "Sin escape / Nowhere to Run (1993)",
+                    "Blanco humano / Hard Target (1993)",
+                    "Timecop (1994)",
+                    "Street Fighter: La última batalla (1994)",
+                    "Muerte súbita / Sudden Death (1995)",
+                    "En busca de la ciudad perdida / The Quest (1996)",
+                    "Al límite del riesgo / Maximum Risk (1996)",
+                    "Double Team (1997)",
+                    "Knock Off (1998)",
+                    "Legionario / Legionnaire (1998)",
+                    "Soldado Universal: El retorno (1999)",
+                    "Desert Heat / Inferno (1999)",
+                    "Replicant (2001)",
+                    "The Order (2001)",
+                    "Sin control / Derailed (2002)",
+                    "En el infierno / In Hell (2003)",
+                    "Desafío a la muerte / Wake of Death (2004)",
+                    "El patrullero / The Shepherd: Border Patrol (2008)",
+                    "JCVD (2008)",
+                    "Soldado Universal: Regeneración (2009)",
+                    "Assassination Games (2011)",
+                    "Los Mercenarios 2 / The Expendables 2 (2012)",
+                    "Soldado Universal: El día del juicio final (2012)",
+                    "6 Bullets (2012)",
+                    "Enemigos cercanos / Enemies Closer (2013)",
+                    "Bienvenido a la jungla / Welcome to the Jungle (2013)",
+                    "Swelter (2014)",
+                    "Pound of Flesh (2015)",
+                    "Kickboxer: Venganza (2016)",
+                    "Black Water (2018)",
+                    "Kickboxer: Contraataque (2018)",
+                    "Lukas / The Bouncer (2018)",
+                    "El último mercenario / The Last Mercenary (2021)",
+                    "Darkness of Man (2024)"
+                ]
+            },
+            {
+                nombre: "Steven Seagal",
+                apodo: "El Maestro del Aikido",
+                estiloPrincipal: "Aikido",
+                peliculas: [
+                    "Por encima de la ley / Above the Law / Nico (1988)",
+                    "Difícil de matar / Hard to Kill (1990)",
+                    "Marcado por la muerte / Marked for Death (1990)",
+                    "Buscando justicia / Out for Justice (1991)",
+                    "Alerta Máxima / Under Siege (1992)",
+                    "En tierra peligrosa / On Deadly Ground (1994)",
+                    "Alerta Máxima 2 / Under Siege 2: Dark Territory (1995)",
+                    "Decisión crítica / Executive Decision (1996)",
+                    "Un hombre entre sombras / The Glimmer Man (1996)",
+                    "En tierra peligrosa 2 / Fire Down Below (1997)",
+                    "El patriota / The Patriot (1998)",
+                    "Herida abierta / Exit Wounds (2001)",
+                    "Ticker (2001)",
+                    "Al filo de la muerte / Half Past Dead (2002)",
+                    "El extranjero / The Foreigner (2003)",
+                    "Venganza ciega / Out for a Kill (2003)",
+                    "Las entrañas de la bestia / Belly of the Beast (2003)",
+                    "Out of Reach (2004)",
+                    "Cazador de demonios / Clementine (2004)",
+                    "Al Sol Poniente / Into the Sun (2005)",
+                    "Submerged (2005)",
+                    "Venganza personal / Today You Die (2005)",
+                    "Mercenary for Justice (2006)",
+                    "Shadow Man (2006)",
+                    "Vuelo de furia / Flight of Fury (2007)",
+                    "Urban Justice (2007)",
+                    "Pistol Whipped (2008)",
+                    "Kill Switch (2008)",
+                    "A Dangerous Man (2009)",
+                    "Machete (2010)",
+                    "Born to Raise Hell (2010)",
+                    "Maximum Conviction (2012)",
+                    "Force of Execution (2013)",
+                    "A Good Man (2014)",
+                    "Absolution (2015)",
+                    "Code of Honor (2016)",
+                    "Sniper: Special Ops (2016)",
+                    "The Asian Connection (2016)",
+                    "End of a Gun (2016)",
+                    "Cartels / Contract to Kill (2016)",
+                    "China Salesman (2017)",
+                    "Attrition (2018)",
+                    "General Commander (2019)",
+                    "Beyond the Law (2019)"
+                ]
+            },
+            {
+                nombre: "Sylvester Stallone",
+                apodo: "Sly",
+                estiloPrincipal: "Boxeo / Combate militar",
+                peliculas: [
+                    "The Party at Kitty and Stud's (1970)",
+                    "Bananas (1971)",
+                    "No hay lugar para esconderse / No Place to Hide (1973)",
+                    "Los señores del Flatbush / The Lords of Flatbush (1974)",
+                    "La carrera de la muerte del año 2000 / Death Race 2000 (1975)",
+                    "Capone (1975)",
+                    "Rocky (1976)",
+                    "F.I.S.T. / F.I.S.T. (1978)",
+                    "La cocina del infierno / Paradise Alley (1978)",
+                    "Rocky II (1979)",
+                    "Halcones de la noche / Nighthawks (1981)",
+                    "Evasión o victoria / Victory (1981)",
+                    "Rocky III (1982)",
+                    "Acorralado / First Blood (Rambo I) (1982)",
+                    "FIST (1983)",
+                    "Rambo: Acorralado Parte II / Rambo: First Blood Part II (1985)",
+                    "Rocky IV (1985)",
+                    "Cobra (1986)",
+                    "Yo, el halcón / Over the Top (1987)",
+                    "Rambo III (1988)",
+                    "Lock Up / Encerrado (1989)",
+                    "Tango y Cash (1989)",
+                    "Rocky V (1990)",
+                    "Oscar / ¡Oscar! (1991)",
+                    "Stop! Or My Mom Will Shoot (1992)",
+                    "Máximo riesgo / Cliffhanger (1993)",
+                    "Demolition Man (1993)",
+                    "El especialista / The Specialist (1994)",
+                    "Juez Dredd / Judge Dredd (1995)",
+                    "Asesinos / Assassins (1995)",
+                    "Pánico en el túnel / Daylight (1996)",
+                    "Cop Land (1997)",
+                    "Get Carter (2000)",
+                    "Driven (2001)",
+                    "D-Tox (2002)",
+                    "Avenging Angelo (2002)",
+                    "Spy Kids 3-D: Game Over (2003)",
+                    "Shade (2003)",
+                    "Rocky Balboa (2006)",
+                    "John Rambo / Rambo (2008)",
+                    "Los Mercenarios / The Expendables (2010)",
+                    "Los Mercenarios 2 / The Expendables 2 (2012)",
+                    "Una bala en la cabeza / Bullet to the Head (2012)",
+                    "Plan de escape / Escape Plan (2013)",
+                    "Ajuste de cuentas / Grudge Match (2013)",
+                    "Los Mercenarios 3 / The Expendables 3 (2014)",
+                    "Creed: La leyenda de Rocky (2015)",
+                    "Creed II (2018)",
+                    "Plan de escape 2: Hades (2018)",
+                    "Plan de escape 3 (2019)",
+                    "Rambo: Last Blood (2019)",
+                    "Samaritan (2022)",
+                    "Los Mercenarios 4 / Expend4bles (2023)"
+                ]
+            },
+            {
+                nombre: "Arnold Schwarzenegger",
+                apodo: "El Roble Danés",
+                estiloPrincipal: "Fuerza bruta / Armamento pesado",
+                peliculas: [
+                    "Hércules en Nueva York / Hercules in New York (1970)",
+                    "Un largo adiós / The Long Goodbye (1973)",
+                    "Stay Hungry (1976)",
+                    "Conan el Bárbaro / Conan the Barbarian (1982)",
+                    "Conan el Destructor / Conan the Destroyer (1984)",
+                    "Terminator / The Terminator (1984)",
+                    "El guerrero rojo / Red Sonja (1985)",
+                    "Comando / Commando (1985)",
+                    "Ejecutor / Raw Deal (1986)",
+                    "Depredador / Predator (1987)",
+                    "Perseguido / The Running Man (1987)",
+                    "Danko: Calor rojo / Red Heat (1988)",
+                    "Los gemelos golpean dos veces / Twins (1988)",
+                    "Desafío total / Total Recall (1990)",
+                    "Poli de guardería / Kindergarten Cop (1990)",
+                    "Terminator 2: El juicio final (1991)",
+                    "El último gran héroe / Last Action Hero (1993)",
+                    "Mentiras arriesgadas / True Lies (1994)",
+                    "Junior (1994)",
+                    "Eraser (1996)",
+                    "Un padre en apuros / Jingle All the Way (1996)",
+                    "Batman y Robin / Batman & Robin (1997)",
+                    "El fin de los días / End of Days (1999)",
+                    "El sexto día / The 6th Day (2000)",
+                    "Daño colateral / Collateral Damage (2002)",
+                    "Terminator 3: La rebelión de las máquinas (2003)",
+                    "El rey de la montaña / The Rundown (2003) [Cameo]",
+                    "La vuelta al mundo en 80 días (2004)",
+                    "Los Mercenarios / The Expendables (2010)",
+                    "Los Mercenarios 2 / The Expendables 2 (2012)",
+                    "El desafío / The Last Stand (2013)",
+                    "Plan de escape / Escape Plan (2013)",
+                    "Sabotage (2014)",
+                    "Los Mercenarios 3 / The Expendables 3 (2014)",
+                    "Maggie (2015)",
+                    "Terminator Génesis / Terminator Genisys (2015)",
+                    "Una historia de venganza / Aftermath (2017)",
+                    "Killing Gunther (2017)",
+                    "El misterio del dragón / Viy 2: Journey to China (2019)",
+                    "Terminator: Destino oscuro / Terminator: Dark Fate (2019)"
+                ]
+            },
+            {
+                nombre: "Jason Statham",
+                apodo: "El Transportista",
+                estiloPrincipal: "Wing Chun / MMA / Kickboxing",
+                peliculas: [
+                    "Lock, Stock and Two Smoking Barrels (1998)",
+                    "Snatch: Cerdos y diamantes (2000)",
+                    "Turn It Up (2000)",
+                    "Ghosts of Mars (2001)",
+                    "El único / The One (2001)",
+                    "Mean Machine / Jugando duro (2001)",
+                    "Transporter / The Transporter (2002)",
+                    "The Italian Job (2003)",
+                    "Cellular (2004)",
+                    "Collateral (2004) [Cameo]",
+                    "Transporter 2 (2005)",
+                    "Revolver (2005)",
+                    "Caos / Chaos (2005)",
+                    "London (2005)",
+                    "Crank: Veneno en la sangre (2006)",
+                    "El asesino / War (2007)",
+                    "En el nombre del rey / In the Name of the King (2007)",
+                    "El robo del siglo / The Bank Job (2008)",
+                    "Death Race (2008)",
+                    "Transporter 3 (2008)",
+                    "Crank 2: Alto voltaje (2009)",
+                    "13 (2010)",
+                    "Los Mercenarios / The Expendables (2010)",
+                    "Blitz (2011)",
+                    "Asesinos de élite / Killer Elite (2011)",
+                    "Mechanic / The Mechanic (2011)",
+                    "Safe (2012)",
+                    "Los Mercenarios 2 / The Expendables 2 (2012)",
+                    "Parker (2013)",
+                    "Redención / Hummingbird (2013)",
+                    "El protector / Homefront (2013)",
+                    "Fast & Furious 6 (2013) [Cameo]",
+                    "Los Mercenarios 3 / The Expendables 3 (2014)",
+                    "Wild Card (2015)",
+                    "Fast & Furious 7 / Furious 7 (2015)",
+                    "Espías / Spy (2015)",
+                    "Mechanic: Resurrection (2016)",
+                    "Fast & Furious 8 / The Fate of the Furious (2017)",
+                    "Megalodón / The Meg (2018)",
+                    "Fast & Furious: Hobbs & Shaw (2019)",
+                    "Despierta la furia / Wrath of Man (2021)",
+                    "Fast & Furious 9 / F9 (2021) [Cameo]",
+                    "Operación Fortune: El gran engaño (2023)",
+                    "Fast & Furious X / Fast X (2023)",
+                    "Megalodón 2: La fosa / Meg 2: The Trench (2023)",
+                    "Los Mercenarios 4 / Expend4bles (2023)",
+                    "Beekeeper: El protector / The Beekeeper (2024)"
+                ]
+            },
+            {
+                nombre: "Dolph Lundgren",
+                apodo: "Ivan Drago",
+                estiloPrincipal: "Kyokushin Karate",
+                peliculas: [
+                    "Panorama para matar / A View to a Kill (1985)",
+                    "Rocky IV (1985)",
+                    "Masters del Universo / Masters of the Universe (1987)",
+                    "Red Scorpion (1988)",
+                    "El castigador / The Punisher (1989)",
+                    "I Come in Peace / Dark Angel (1990)",
+                    "Coversión mortal / Cover-Up (1991)",
+                    "Showdown in Little Tokyo (1991)",
+                    "Soldado Universal / Universal Soldier (1992)",
+                    "Fuga mortal / Joshua Tree (1993)",
+                    "Men of War (1994)",
+                    "Pentathlon (1994)",
+                    "Johnny Mnemonic (1995)",
+                    "Shooter / Desafío final (1995)",
+                    "Silent Trigger (1996)",
+                    "The Peacekeeper (1997)",
+                    "Desafío en las olas / Blackjack (1998)",
+                    "Sweepers (1998)",
+                    "Bridge of Dragons (1999)",
+                    "Storm Catcher (1999)",
+                    "Jill Rips (2000)",
+                    "The Last Patrol (2000)",
+                    "Agent Red (2000)",
+                    "Hidden Agenda (2001)",
+                    "Detención definitiva / Direct Action (2004)",
+                    "The Defender (2004)",
+                    "El especialista / The Mechanik (2005)",
+                    "Missionary Man (2007)",
+                    "Direct Contact (2009)",
+                    "Command Performance (2009)",
+                    "Soldado Universal: Regeneración (2009)",
+                    "Icarus (2010)",
+                    "Los Mercenarios / The Expendables (2010)",
+                    "Los Mercenarios 2 / The Expendables 2 (2012)",
+                    "Soldado Universal: El día del juicio final (2012)",
+                    "One in the Chamber (2012)",
+                    "Tomb of the Dragon (2013)",
+                    "Battle of the Damned (2013)",
+                    "Los Mercenarios 3 / The Expendables 3 (2014)",
+                    "Skin Trade (2014)",
+                    "War Pigs (2015)",
+                    "Kindergarten Cop 2 (2016)",
+                    "Don't Kill It (2016)",
+                    "Larceny (2017)",
+                    "Creed II (2018)",
+                    "Aquaman (2018)",
+                    "Black Water (2018)",
+                    "Hard Night Falling (2019)",
+                    "Castle Falls (2021)",
+                    "Minions: El origen de Gru (2022) [Voz]",
+                    "Aquaman y el reino perdido / Aquaman 2 (2023)",
+                    "Los Mercenarios 4 / Expend4bles (2023)",
+                    "Wanted Man (2024)"
+                ]
+            },
+            {
+                nombre: "Wesley Snipes",
+                apodo: "Blade",
+                estiloPrincipal: "Shotokan Karate / Capoeira",
+                peliculas: [
+                    "Wildcats (1986)",
+                    "Streets of Gold (1986)",
+                    "Critical Condition (1987)",
+                    "Major League (1989)",
+                    "Mo' Better Blues (1990)",
+                    "El rey de Nueva York / King of New York (1990)",
+                    "New Jack City (1991)",
+                    "Fiebre jungle / Jungle Fever (1991)",
+                    "Los blancos no saben saltar / White Men Can't Jump (1992)",
+                    "Pasajero 57 / Passenger 57 (1992)",
+                    "Sol naciente / Rising Sun (1993)",
+                    "Demolition Man (1993)",
+                    "Sugar Hill (1993)",
+                    "Zona de caída / Drop Zone (1994)",
+                    "A Wong Foo, ¡gracias por todo! (1995)",
+                    "Money Train / Asalto al tren del dinero (1995)",
+                    "Fanático / The Fan (1996)",
+                    "Asesinato en la Casa Blanca / Murder at 1600 (1997)",
+                    "Después de una noche / One Night Stand (1997)",
+                    "U.S. Marshals (1998)",
+                    "Blade (1998)",
+                    "El arte de la guerra / The Art of War (2000)",
+                    "Disappearing Acts (2000)",
+                    "ZigZag (2002)",
+                    "Blade II (2002)",
+                    "Invicto / Undisputed (2002)",
+                    "Unstoppable (2004)",
+                    "Blade: Trinity (2004)",
+                    "7 Seconds (2005)",
+                    "El detonador / The Detonator (2006)",
+                    "Hard Luck (2006)",
+                    "El tirador / Shooter / Contractor (2007)",
+                    "El arte de la guerra II / The Art of War II (2008)",
+                    "Los mejores de Brooklyn / Brooklyn's Finest (2009)",
+                    "Game of Death (2010)",
+                    "Gallowwalkers (2012)",
+                    "Los Mercenarios 3 / The Expendables 3 (2014)",
+                    "Chi-Raq (2015)",
+                    "Armed Response (2017)",
+                    "The Recall (2017)",
+                    "Yo soy Dolemite / Dolemite Is My Name (2019)",
+                    "El rey de Zamunda / Coming 2 America (2021)",
+                    "Back on the Strip (2023)",
+                    "Deadpool y Lobezno / Deadpool & Wolverine (2024) [Cameo]"
+                ]
+            },
+            {
+                nombre: "Jackie Chan",
+                apodo: "El Rey del Kung Fu Cómico",
+                estiloPrincipal: "Kung Fu acrobático / Hapkido",
+                peliculas: [
+                    "La mano de la muerte / Hand of Death (1976)",
+                    "Serpiente a la sombra del águila / Snake in the Eagle's Shadow (1978)",
+                    "El mono borracho en el ojo del tigre / Drunken Master (1978)",
+                    "La hiena intocable / The Fearless Hyena (1979)",
+                    "El chino / The Young Master (1980)",
+                    "La furia del Chicago / Battle Creek Brawl (1980)",
+                    "Los locos del Cannonball / The Cannonball Run (1981)",
+                    "Proyecto A / Project A (1983)",
+                    "Los supercamorristas / Wheels on Meals (1984)",
+                    "Protector / The Protector (1985)",
+                    "Armas invencibles / Police Story (1985)",
+                    "La armadura de Dios / Armour of God (1986)",
+                    "Proyecto A II / Project A II (1987)",
+                    "Lover de los dragones / Dragons Forever (1988)",
+                    "Police Story 2 (1988)",
+                    "Miracles / Mr. Canton and Lady Rose (1989)",
+                    "La armadura de Dios II: Operación Cóndor (1991)",
+                    "Police Story 3: Supercop (1992)",
+                    "Ciudadano cazador / City Hunter (1993)",
+                    "La leyenda del luchador borracho / Drunken Master II (1994)",
+                    "Duro de matar / Rumble in the Bronx (1995)",
+                    "Impacto inminente / First Strike (1996)",
+                    "El súper chef / Mr. Nice Guy (1997)",
+                    "¿Quién soy? / Who Am I? (1998)",
+                    "Hora punta / Rush Hour (1998)",
+                    "Rush Hour 2 (2001)",
+                    "El esmoquin / The Tuxedo (2002)",
+                    "Shanghai Knights / Los rebeldes de Shanghai (2003)",
+                    "El poder del talismán / The Medallion (2003)",
+                    "La vuelta al mundo en 80 días (2004)",
+                    "New Police Story (2004)",
+                    "El mito / The Myth (2005)",
+                    "Dos ladrones y un medio / Rob-B-Hood (2006)",
+                    "Hora punta 3 / Rush Hour 3 (2007)",
+                    "El reino prohibido / The Forbidden Kingdom (2008)",
+                    "Shinjuku Incident (2009)",
+                    "El supercanguro / The Spy Next Door (2010)",
+                    "The Karate Kid (2010)",
+                    "1911 (2011)",
+                    "CZ12 / Chinese Zodiac (2012)",
+                    "Police Story: Lockdown (2013)",
+                    "Dragon Blade (2015)",
+                    "Atrapa a ese cadete / Skiptrace (2016)",
+                    "Railroad Tigers (2016)",
+                    "El extranjero / The Foreigner (2017)",
+                    "Bleeding Steel (2017)",
+                    "El caballero de las sombras / The Knight of Shadows (2019)",
+                    "Vanguard (2020)",
+                    "Ride On (2023)",
+                    "Proyecto Extraordinario / Hidden Strike (2023)",
+                    "Ninja Turtles: Caos Mutante (2023) [Voz]"
+                ]
+            }
+        ];
+
+        /* 
+        1. El actor que protagonizó machete.
+        2. Cuántos actores diferentes protagonizaron los mercenarios (necesito sus nombres, a ser posible no repetidos).
+        3. Qué actor protagonizó Delta Force.
+        4 Apodo del actor que protagonizó la película Delta Force.
+        5 Actor y año de las películas Terminator.
+        */
+
+        // Actor 'Machete'
+        let actorMachete = actoresChungosFilmografia.find((actor) =>
+            actor.peliculas.find(pelicula =>
+                pelicula.toLowerCase().includes("machete")
+            )
+        );
+
+        document.getElementById("actorMachete").textContent += (actorMachete.nombre);
+
+        // Actores 'Los Mercenarios'
+        let actoresMercenarios = actoresChungosFilmografia.filter((actor) =>
+            actor.peliculas.find(pelicula =>
+                pelicula.toLowerCase().includes("mercenarios")
+            )
+        );
+
+        document.getElementById("actoresMercenarios").textContent += actoresMercenarios.map(actor => actor.nombre).join(", ");
+
+        // Actor 'Delta Force'
+        let actorInvasionDelta = actoresChungosFilmografia.find((actor) =>
+            actor.peliculas.find(pelicula =>
+                pelicula.toLowerCase().includes("delta")
+            )
+        );
+
+        document.getElementById("actorInvasionDelta").textContent += (actorInvasionDelta.nombre);
+
+        // Apodo del actor 'Delta Force'
+        document.getElementById("apodoDeltaForce").textContent += (actorInvasionDelta.apodo);
+
+        // Actor y año de las películas de 'Terminator'
+        let actorTerminator = actoresChungosFilmografia.find((actor) =>
+            actor.peliculas.find(pelicula =>
+                pelicula.toLowerCase().includes("terminator")
+            )
+        );
+
+        document.getElementById("actorTerminator").textContent += (actorTerminator.nombre);
+
+
+        let peliculasTerminator = actorTerminator.peliculas.filter((pelicula) =>
+            pelicula.toLowerCase().includes("terminator")
+        );
+
+        peliculasTerminator.forEach((pelicula) => {
+            document.getElementById("peliculasTerminator").innerHTML +=
+                `<p>${pelicula}</p>`;
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -22,4 +22,4 @@ else
 {
     require "vistas/vista_formulario.php";
 }
-?>
+?> 
