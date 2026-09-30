@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <p id="godos"></p>
+
+    <script>
+        const GODOS = [
+            "Atanarico",
+            "Alarico I",
+            "Ataúlfo",
+            "Sigerico",
+            "Walia",
+            "Teodorico I",
+            "Turismundo",
+            "Teodorico II",
+            "Evarico", [
+                "Alarico II",
+                "Gesaleico",
+                "Teodorico el Grande",
+                "Amalarico",
+                "Teudis"],
+            "Teudiselo",
+            "Agila I",
+            "Atanagildo",
+            "Liuva I",
+            "Leovigildo",
+            "Recaredo I",
+            "Liuva II",
+            "Witerico",
+            "Gundemaro",
+            "Sisebuto",
+            "Recaredo II",
+            "Suintila",
+            "Sisenando",
+            "Chintila",
+            ["Tulga",
+                "Chindasvinto",
+                "Recesvinto",
+                "Wamba",
+                "Ervigio"],
+            "Egica",
+            "Witiza",
+            "Rodrigo",
+            "Agila II",
+            "Ardo"
+        ]
+
+        // Tip: La función Array.isArray() comprueba si el valor que le pasas es un Array. Devuelve true si lo es y false si no.
+        function mostrarArray(array) {
+            let lista = document.createElement("ul");
+
+            array.map((elemento) => {
+                if (Array.isArray(elemento)) {
+                    let elementoLista = document.createElement("li");
+                    elementoLista.appendChild(mostrarArray(elemento));
+                    lista.appendChild(elementoLista);
+                } else {
+                    let elementoLista = document.createElement("li");
+                    elementoLista.textContent = elemento.toString();
+                    lista.appendChild(elementoLista);
+                }
+            })
+
+            return lista;
+        }
+
+        let lista = mostrarArray(GODOS);
+        document.getElementById("godos").appendChild(lista);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-flow: column;
+}
+
+header > p {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 2.5rem;
+    align-items: center;
+    
+}
+
+header > p > span:nth-child(1){
+    display: none;
+}
+
+header > div {
+    display: flex;
+}
+
+header > div > svg:nth-child(1) { /*Logotivo*/
+    width: 4rem;
+    height: auto;
+    order: 3;
+}
+
+header > div > nav#main-menu {
+    display: flex;
+    flex-flow: column;    
+    order: 1
+}
+
+header > div > nav#main-menu > ul, 
+header > div > nav#main-menu > input {
+    display: none;
+}
+
+header > div > svg#corazon {
+    order: 2;
+}
+
+header > div:nth-last-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: lightgrey;
+}
