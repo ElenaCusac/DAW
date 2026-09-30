@@ -1,0 +1,6 @@
+Define una función flecha que tome un mensaje de error o evento (un string) 
+y devuelva una cadena formateada con la hora exacta en la que ocurrió, 
+por ejemplo: "[14:35:08] ERROR: Conexión fallida".
+
+
+Pistas: getHours(), getMinutes(), getSeconds()

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Precio</title>
+</head>
+
+<body>
+
+    <h2>Filtrar, aplicar IVA y calcular el total de una categoría</h2>
+    <P id="precioTotal"></P>
+    <script>
+        const productos = [
+            { nombre: "Televisor", precio: 400, categoria: "Electrónica" },
+            { nombre: "Sofá", precio: 600, categoria: "Hogar" },
+            { nombre: "Auriculares", precio: 50, categoria: "Electrónica" },
+            { nombre: "Silla de escritorio", precio: 120, categoria: "Hogar" }
+        ];
+
+        // 1. Filtrar los productos de Electrónica
+        let productosElectronica = productos.filter(
+            producto => producto.categoria === "Electrónica"
+        );
+
+        // 2. Aplicar el 21% de IVA
+        let productosConIva = productosElectronica.map(
+            producto => {
+                producto.precio = producto.precio * 1.21;
+                return producto;
+            }
+        );
+
+        // 3. Calcular el precio total
+        let precioFinal = 0;
+
+        function calcularPrecio() {
+            productosConIva.map(
+                producto => {
+                    precioFinal = precioFinal + producto.precio;
+                }
+            );
+
+            return precioFinal;
+        }
+
+        // 4. Ejecutar la función y mostrar el resultado
+        precioFinal = calcularPrecio();
+
+
+        document.getElementById("precioTotal").innerHTML = "El precio final es: " + precioFinal.toFixed(2) + " €"
+
+    </script>
+</body>
+
+</html>

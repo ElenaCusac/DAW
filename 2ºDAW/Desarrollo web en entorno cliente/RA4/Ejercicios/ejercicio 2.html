@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costo Carrito</title>
+</head>
+
+<body>
+    <p id="costo">Costo total del carrito: </p>
+    <script>
+        /*
+        Queremos buscar productos y calcular el total del carrito. Los productos pueden
+        estar o no en el carrito (inCart true o false)
+
+        Tienes un array de productos con propiedades nombre, precio, y inCart. Queremos calcular el
+        costo total del carrito.
+        */
+
+        const products = [
+            { nombre: "Laptop", precio: 1000, inCart: true },
+            { nombre: "Phone", precio: 500, inCart: false },
+            { nombre: "Tablet", precio: 300, inCart: true }
+        ];
+
+        let costo = 0;
+
+        let productosExistentes = products
+            .filter((producto) => producto.inCart === true)
+            .map((producto) => {
+                costo += producto.precio;
+            });
+        
+        document.getElementById("costo").innerHTML += costo;
+    </script>
+</body>
+
+</html>

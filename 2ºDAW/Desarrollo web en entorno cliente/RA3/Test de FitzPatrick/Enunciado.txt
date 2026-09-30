@@ -1,3 +1,6 @@
-La escala de fototipos de†Fitzpatrick†permite conocer la sensibilidad de la piel frente a la luz ultravioleta (luz solar). Este test ayuda a saber tu propensiÛn a sufrir quemaduras y c·ncer de piel.
+La escala de fototipos de Fitzpatrick permite conocer la sensibilidad 
+e la piel frente a la luz ultravioleta (luz solar). Este test ayuda a 
+saber tu propensi√≥n a sufrir quemaduras y c√°ncer de piel.
 
-Se pide que implementes en JavaScript sencillo el siguiente formulario con los conocimientos que tienes actualmente. 
+Se pide que implementes en JavaScript sencillo el siguiente formulario 
+con los conocimientos que tienes actualmente. 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bonificación condicional según antigüedad y departamento</h1>
+    <pre id="empleados">Empleados con más de 2 años de antigüedad y sueldo aumentado: </pre>
+    <script>
+        /*
+        Tienes una lista de empleados con sus años de antigüedad y departamento. Se
+        pide obtener un nuevo array de objetos solo con los empleados del departamento "Ventas"
+        que tengan 3 o más años de antigüedad, sumándoles un bono de 500 € a su salario actual.
+        */
+
+        const empleados = [
+            { nombre: "Laura", salario: 2100, departamento: "Ventas", antiguedadAños: 4 },
+            { nombre: "Marcos", salario: 1900, departamento: "Ventas", antiguedadAños: 1 },
+            { nombre: "Sofía", salario: 2500, departamento: "Marketing", antiguedadAños: 5 },
+            { nombre: "Javier", salario: 2200, departamento: "Ventas", antiguedadAños: 3 }
+        ];
+
+        let empleadosVentas = empleados
+            .filter((empleado) => empleado.departamento == "Ventas" && empleado.antiguedadAños >= 3)
+            .map((empleado) => {
+                empleado.salario += 500;
+                return empleado;
+            });
+
+        document.getElementById("empleados").innerHTML += JSON.stringify(empleadosVentas, null, 2);
+    </script>
+</body>
+
+</html>

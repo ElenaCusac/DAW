@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RubikTimer - Registro de tiempos</title>
+</head>
+
+<body>
+    <h1>RubikTimer - Registro de tiempos</h1>
+    <div>
+        <label for="playerName">Jugador:</label>
+        <input type="text" id="playerName" value="Federico" placeholder="Nombre jugador...">
+    </div>
+    <div>
+        <span id="displayMinutes">00</span>
+        <span>:</span>
+        <span id="displaySeconds">00</span>
+        <span>.</span>
+        <span id="displayMillis">00</span>
+    </div>
+    <div>
+        <button id="btnStartPause"> <span id="lblStartPause">Iniciar</span> </button>
+        <button id="btnSaveTime" disabled> <span>Guardar Tiempo</span> </button>
+        <button id="btnReset" disabled> <span>Reiniciar</span> </button>
+    </div>
+    <h1>Tabla de Tiempos</h1>
+    <p id="tiempos"></p>
+
+    <script>
+        // Nombre
+        var nombre = document.getElementById("playerName").value;
+
+        // Campo para mostrar la tabla
+        var mensaje = document.getElementById("tiempos");
+
+        // Botones
+        var iniciar = document.getElementById("btnStartPause");
+        var guardarTiempo = document.getElementById("btnSaveTime");
+        var reiniciar = document.getElementById("btnReset");
+
+        // Tiempo
+        var minutos = document.getElementById("displayMinutes").value;
+        var segundos = document.getElementById("displaySeconds").value;
+        var milisegundos = document.getElementById("displayMillis").value;
+
+        // Botón para iniciar
+        iniciar.addEventListener("click", function() {
+            var tiempo = setInterval(() => {
+
+                if (milisegundos == 0) {
+                    milisegundos++;
+                    document.getElementById("displayMillis").innerHTML = milisegundos;
+
+                    if(milisegundos < 10){
+                        document.getElementById("displayMillis").innerHTML = "0" + milisegundos;
+                    }
+
+                }
+
+                if (milisegundos == 100) {
+                    segundos++;
+                    milisegundos = 0;
+
+                    if(segundos < 10){
+                        document.getElementById("displayMillis").innerHTML = "0" + segundos;
+                    }
+                    
+                    document.getElementById("displaySeconds").innerHTML = segundos;
+                }
+
+                if(segundos == 60) {
+                    minutos++;
+                    segundos = 0;
+
+                    if(minutos < 10){
+                        document.getElementById("displayMillis").innerHTML = "0" + minutos;
+                    }
+                    
+                }
+            }, 10);
+
+            guardarTiempo.disabled = false;
+
+        })
+
+        // Botón para guardar el tiempo
+        guardarTiempo.addEventListener("click", function(){
+            clearInterval(tiempo);
+
+            mensaje.innerHTML = nombre + " -----> " + minutos + " Minutos " + segundos + " Segundos " + milisegundos + " Milisegundos";
+
+            minutos = 0;
+            segundos = 0;
+            milisegundos = 0;
+
+            document.getElementById("displayMillis").innerHTML = minutos;
+            document.getElementById("displaySeconds").innerHTML = segundos;
+            document.getElementById("displayMillis").innerHTML = minutos;
+
+            document.getElementById('btnSaveTime').disabled = true;
+            document.getElementById('btnReset').disabled = true;
+        });
+
+        // Botón para reiniciar
+        reiniciar.addEventListener("click", function(){
+            clearInterval(tiempo);
+            minutos = 0;
+            segundos = 0;
+            milisegundos = 0;
+
+            document.getElementById("displayMillis").innerHTML = milisegundos;
+            document.getElementById("displaySeconds").innerHTML = segundos;
+            document.getElementById("displayMillis").innerHTML = minutos;
+
+            document.getElementById('btnSaveTime').disabled = true;
+            document.getElementById('btnReset').disabled = true;
+        });
+
+    </script>
+
+</body>
+
+</html>

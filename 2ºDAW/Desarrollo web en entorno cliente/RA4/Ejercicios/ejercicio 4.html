@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario</title>
+</head>
+
+<body>
+    <p id="salario">Empleado con el salario más alto:  </p>
+    <script>
+        const empleados = [
+            { nombre: "Alicia", salario: 3000, departamento: "HR" },
+            { nombre: "Roberto", salario: 5000, departamento: "Engineering" },
+            { nombre: "Carlos", salario: 4000, departamento: "Engineering" },
+            { nombre: "Dave", salario: 3500, departamento: "HR" }
+        ];
+
+        let empleadosIngenieros = empleados.filter((empleado) => empleado.departamento == "Engineering");
+
+        let sueldoMasAlto = empleadosIngenieros.find((empleado) => {
+            return empleadosIngenieros.filter((e) => e.salario > empleado.salario).length === 0;
+        });
+
+        document.getElementById("salario").innerHTML += sueldoMasAlto.nombre;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+</head>
+
+<body>
+    <h1>Carrito con cantidades y cálculo de total</h1>
+    <p id="precio">Precio total del carrito: </p>
+
+    <script>
+        const carrito = [
+            { nombre: "Camiseta", precio: 20, cantidad: 3, enCarrito: true },
+            { nombre: "Pantalón", precio: 50, cantidad: 1, enCarrito: false },
+            { nombre: "Zapatillas", precio: 80, cantidad: 2, enCarrito: true }
+        ];
+
+        let precioTotal = 0;
+
+        // 1. Filtrar los productos que están en el carrito
+        let productosSeleccionados = carrito.filter(
+            producto => producto.enCarrito === true
+        );
+
+        // 2. Calcular el importe de cada producto y acumular el total
+        productosSeleccionados.map(producto => {
+            precioTotal += producto.precio * producto.cantidad;
+            return producto;
+        });
+
+        // 3. Mostrar el precio total
+        document.getElementById("precio").textContent +=
+            precioTotal.toFixed(2) + " €";
+    </script>
+</body>
+
+</html>

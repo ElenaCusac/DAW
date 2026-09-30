@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto III</title>
+</head>
+
+<body>
+
+    <p id="suma">Suma de las notas de DWEC: </p>
+    <p id="media">Media de las notas de DWEC: </p>
+
+
+    <script>
+        var valumnos = {
+            "alumnos": [{
+                "nombre": "Fulanito",
+                "notas": {
+                    "DWEC": 8,
+                    "DWESE": 0.71,
+                    "ED": 7.04,
+                    "SSOO": 3.37,
+                    "BBDD": 0.22,
+                    "PROG": 1.09,
+                    "EINEM": 6.17
+                }
+            },
+            {
+                "nombre": "Menganito",
+                "notas": {
+                    "DWEC": 7,
+                    "DWESE": 0.71,
+                    "ED": 7.04,
+                    "SSOO": 3.37,
+                    "BBDD": 0.22,
+                    "PROG": 1.09,
+                    "EINEM": 6.17
+                }
+            }
+                ,
+            {
+                "nombre": "Cetanito",
+                "notas": {
+                    "DWEC": 6,
+                    "DWESE": 0.71,
+                    "ED": 7.04,
+                    "SSOO": 3.37,
+                    "BBDD": 0.22,
+                    "PROG": 1.09,
+                    "EINEM": 6.17
+                }
+            }
+            ]
+        };
+
+        // Suma de las notas de DWEC
+        var suma = 0;
+
+        for (var i = 0; i < valumnos.alumnos.length; i++) {
+            suma += valumnos.alumnos[i].notas.DWEC;
+        }
+
+        // Media de las notas de DWEC
+        var media = suma / valumnos.alumnos.length;
+
+        // Mostrar los resultados en el HTML
+        document.getElementById("suma").textContent =
+            "Suma de las notas de DWEC: " + suma;
+
+        document.getElementById("media").textContent =
+            "Media de las notas de DWEC: " + media;
+
+    </script>
+
+</body>
+
+</html>

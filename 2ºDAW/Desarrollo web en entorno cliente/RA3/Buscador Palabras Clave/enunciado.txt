@@ -1,0 +1,6 @@
+Crea una función flecha que reciba un texto largo y una palabra a buscar. 
+La función debe indicar si la palabra está presente en el texto 
+(sin importar mayúsculas o minúsculas) y guardar la palabra buscada 
+en un historial dentro de localStorage.
+
+Pistas: Funciones con Strings, localStorage, Funciones Arrow

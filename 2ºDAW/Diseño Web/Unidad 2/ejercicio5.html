@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <style>
+        input:invalid {
+            border-color: #be0c0c;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Iniciar sesión</h2>
+
+    <p>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" title="Introduzca el email" placeholder="Email" aria-label="campo email" required pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/"  maxlength="30" autofocus></input>
+    </p>
+    <p>
+        <label for="password">Contraseña: </label>
+        <input type="password" id="password" name="password" title="Introduzca la contraseña" placeholder="Contraseña" aria-label="campo contraseña" required minlength="8" maxlength="30" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/"></input>
+    </p>
+
+    <label>Recuperar contraseña</label>
+
+    <button type="submit" id="iniciarSesion" name="iniciarSesion">Iniciar sesión</button>
+
+
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+Simula un sistema de autoguardado para un editor de texto. Crea un script que cada 5 segundos 
+tome el contenido de una variable de texto y lo guarde en sessionStorage bajo la clave "borrador".
+Inventa algun sistema para poder saber si lo que has grabado en sessionStorage funciona.
+
+Pistas: sessionStorage, setInterval(), Funciones Arrow

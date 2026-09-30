@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>retos JavaScript</title>
+</head>
+
+<body>
+    <h1>retos JavaScript</h1>
+    <p id="frutas">Las frutas son: </p>
+    <script>
+        let frutas = ["aguacate", "pera", "manzana", "naranja", "tomate", "granada", "mango", "litchi", "nispero"];
+        let tropicales = ["aguacate", "mango", "litchi", "nispero", "dragon fruit"];
+        let tropicStock = [{ fruta: "manzana", stock: 55 }, { fruta: "aguacate", stock: 50 }, { fruta: "mango", stock: 10 },
+        { fruta: "litchi", stock: 20 }, { fruta: "nispero", stock: 25 }];
+
+        //Nombre de las frutas tropicales con un stock mayor de 21
+        let tropicNombres = tropicStock
+        .filter(tropic => tropic.stock > 21)
+        .map(tropic => {return tropic.fruta;})
+        .filter((nombre => {
+            if (frutas.includes(nombre)) {
+                return nombre;
+        }}));
+
+        document.getElementById("frutas").innerHTML += tropicNombres.toString();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salarios de empleados</title>
+</head>
+
+<body>
+
+    <p id="salarioEmpleados"></p>
+
+    <script>
+        /*
+        Utiliza map y filter para calcular los salarios aumentados de empleados con salario
+        bajo. Tienes un array de objetos empleados con propiedades nombre y salario. Se necesita
+        seleccionar empleados con salario menor a 3000 e incrementar su salario en 10%. Muestralo
+        como un array de objetos
+        */
+
+        const empleados = [
+            { nombre: "Alicia", salario: 2500 },
+            { nombre: "Roberto", salario: 4000 },
+            { nombre: "Carlos", salario: 2000 }
+        ];
+
+        const empleadosAumentados = empleados
+            .filter((empleado) => empleado.salario < 3000)
+            .map((empleado) => {
+                return {
+                    nombre: empleado.nombre,
+                    salario: empleado.salario * 1.10
+                };
+            });
+
+        document.getElementById("salarioEmpleados").innerHTML = "<pre>" + JSON.stringify(empleadosAumentados, null, 2) + "</pre>";
+
+    </script>
+
+</body>
+
+</html>

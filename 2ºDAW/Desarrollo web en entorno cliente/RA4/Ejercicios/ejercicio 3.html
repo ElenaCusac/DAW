@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="costo">Costo total del carrito: </p>
+    <script>
+        /*
+        Se pide calcular el precio total de todos los productos que estén en descuento
+        previamente descontando un 10% de su pvp.
+        */
+
+        const products = [
+            { nombre: "Laptop", precio: 1000, discounted: true },
+            { nombre: "Phone", precio: 500, discounted: false },
+            { nombre: "Tablet", precio: 300, discounted: true },
+            { nombre: "Monitor", precio: 200, discounted: true }
+        ];
+
+        let costo = 0;
+
+        let productosExistentes = products
+            .filter((producto) => producto.discounted === true)
+            .map((producto) => {
+                costo += producto.precio * 1.10;
+            });
+        
+        document.getElementById("costo").innerHTML += costo;
+    </script>
+</body>
+
+</html>

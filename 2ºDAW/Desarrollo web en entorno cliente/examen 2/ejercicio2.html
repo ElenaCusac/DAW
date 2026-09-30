@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<body>
+    <p>
+        Se pide que hagas un programa que muestre la media de TODAS las notas de DWEC de los alumnos que tenemos en
+        nuestro JSON. Hoy hay 3 alumnos pero podrían ser 3000.
+    </p>
+
+    <p id="media">La media es: </p>
+
+    <script>
+        var valumnos = {
+            "alumnos": [{
+                "nombre": "Fulanito",
+                "notas": {
+                    "DWEC": 8,
+                    "DWESE": 0.71,
+                    "ED": 7.04,
+                    "SSOO": 3.37,
+                    "BBDD": 0.22,
+                    "PROG": 1.09,
+                    "EINEM": 6.17
+                }
+            },
+            {
+                "nombre": "Menganito",
+                "notas": {
+                    "DWEC": 7,
+                    "DWESE": 0.71,
+                    "ED": 7.04,
+                    "SSOO": 3.37,
+                    "BBDD": 0.22,
+                    "PROG": 1.09,
+                    "EINEM": 6.17
+                }
+            }
+                ,
+            {
+                "nombre": "Cetanito",
+                "notas": {
+                    "DWEC": 6,
+                    "DWESE": 0.71,
+                    "ED": 7.04,
+                    "SSOO": 3.37,
+                    "BBDD": 0.22,
+                    "PROG": 1.09,
+                    "EINEM": 6.17
+                }
+            }
+            ]
+        };
+
+
+        // ESCRIBE TU CÓDIGO AQUÍ
+        let notasDWEC = valumnos.alumnos.map(alumno => {
+            return alumno.notas.DWEC;
+        });
+
+        function calcularMedia(notas) {
+            let media = 0;
+
+            for (let i = 0; i < notas.length; i++) {
+                media += notas[i];    
+            }
+
+            return media/notas.length;
+        }
+
+        let media = calcularMedia(notasDWEC);
+
+        document.getElementById("media").innerHTML += media;
+
+    </script>
+</body>
+
+</html>
