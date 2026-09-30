@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+}
+
+main h2 {
+    text-align: center;
+    justify-content: flex-start;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+}
+
+form input,
+form select,
+form button {
+    width: 20rem;
+    padding: 0.5rem;
+    margin: auto;
+    align-items: s;
+    gap: 0.3rem;
+}
+
+div {
+    display: flex;
+    flex-flow: row;
+}
+
+div select {
+    padding: 0%;
+}
+
+form label {
+    padding: 2%;
+    margin: auto;
+
+}
+
+form button {
+    margin: 1rem;
+    color: white;
+    background-color: black;
+    width: 14rem;
+
+}
+
+form select#pais {
+    width: auto;
+}
